@@ -1,0 +1,36 @@
+section {
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    rotate: -90deg;
+    background-color: transparent;
+    font-size: 64px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #9747ff;
+}
+
+button {
+    background-color: #70E61C;
+    color: white;
+    height: 58px;
+    width: 165px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: #9747ff;
+    }
+}

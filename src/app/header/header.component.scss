@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    height: 109px;
+}
+
+img {
+    height: 35px;
+}
+
+div {
+    display: flex;
+    gap: 29px;
+    >a {
+        cursor: pointer;
+        font-size: 23px;
+    }
+    >a:hover {
+        color: #70e61c;
+    }
+}
+
