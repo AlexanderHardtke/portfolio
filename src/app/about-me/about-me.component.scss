@@ -1,0 +1,25 @@
+* {
+    background-color: #141c2e;
+    width: 100%;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.about-me {
+    width: 471px;
+}
+
+p {
+    >img{
+        width: 30px;
+    }
+}

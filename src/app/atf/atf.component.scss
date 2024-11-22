@@ -1,8 +1,5 @@
 section {
     height: calc(100vh - 100px);
-    background-image: url(../../assets/img/background/shadows1.png);
-    background-position: left;
-    background-repeat: no-repeat;
     background-color: #141c2e;
 
     >img {
@@ -14,11 +11,24 @@ section {
     }
 }
 
+.shadows{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    
+    >img:nth-child(odd) {
+        margin-left: -300px;
+    }
+
+    >img:nth-child(even) {
+        margin-left: 300px;
+    }
+}
+
 .btnDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: self-end;
     position: relative;
     top: 200px;
     z-index: 2;
