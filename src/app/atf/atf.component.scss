@@ -1,27 +1,16 @@
 section {
     height: calc(100vh - 100px);
     background-color: #141c2e;
+    background-image: url(../../assets/img/background/shadow9.png);
+    background-repeat: no-repeat;
+    background-position: 80vw -6vh;
+    background-size: 720px;
 
     >img {
-        left: 0;
-        top: 38%;
+        height: 750px;
+        left: -18%;
+        top: 10vh;
         position: absolute;
-        z-index: 1;
-        width: 100%;
-    }
-}
-
-.shadows{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    
-    >img:nth-child(odd) {
-        margin-left: -300px;
-    }
-
-    >img:nth-child(even) {
-        margin-left: 300px;
     }
 }
 
@@ -55,6 +44,7 @@ button {
     cursor: pointer;
     margin-top: 44px;
     transition: all 250ms ease-out;
+    border: none;
 
     &:hover {
 

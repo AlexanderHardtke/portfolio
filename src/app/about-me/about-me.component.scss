@@ -1,17 +1,20 @@
-* {
-    background-color: #141c2e;
-    width: 100%;
-}
-
 h1 {
     font-size: 90px;
 }
 
 section {
+    background-color: #141c2e;
     position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 2;
+    width: calc(100% - 200px);
+    >img {
+        position: absolute;
+        top: 520px;
+        width: calc(100% + 200px);
+        margin-left: -100px;
+    }
 }
 
 .about-me {
