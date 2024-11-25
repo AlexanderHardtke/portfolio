@@ -1,0 +1,36 @@
+section {
+    background-color: #141c2e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 290px;
+}
+
+hr{
+    width: calc(100% + 200px);
+    margin-left: -100px;
+    height: 4px;
+    background-color: #70e61c;
+    border: none;
+}
+
+.social{
+    display: flex;
+    gap: 42px;
+
+    >img{
+        cursor: pointer;
+    }
+
+    >img:hover {
+        
+    }
+}
+
+p {
+    position: relative;
+    bottom: 1px;
+    left: 100px;
+    font-size: 16px;
+    background-color: #141c2e;
+}
