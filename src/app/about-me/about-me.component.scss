@@ -2,27 +2,36 @@ h1 {
     font-size: 90px;
 }
 
+.profile {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    z-index: 3;
+    bottom: 260px;
+}
+
 section {
     background-color: #141c2e;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     z-index: 2;
     width: calc(100% - 200px);
-    >img {
-        position: absolute;
-        top: 520px;
-        width: calc(100% + 200px);
-        margin-left: -100px;
-    }
+    min-height: 100vh;
 }
 
 .about-me {
-    width: 471px;
-}
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 
-p {
-    >img{
-        width: 30px;
+    >div {
+        display: flex;
+        gap: 26px;
+
+        >img {
+            height: 48px;
+        }
     }
 }
