@@ -2,9 +2,9 @@
     @for(project of projects; track project.name){
     <section class="dFlexCenter">
 
-        <img src="../../../assets/img/{{project.img}}">
+        <img src="../../../assets/img/{{project.imgDevice}}">
 
-        <div class="hover">
+        <div class="hoverProject">
             <div class="buttons">
                 <a class="git dFlexCenter" href="{{project.gitHub}}">GitHub</a>
                 <a class="projectLink dFlexCenter" href="{{project.projectLink}}">Live test</a>
@@ -16,6 +16,7 @@
                 <!-- <p>{{project.descriptionGer}}</p> -->
                 <span class="dFlexCenter">{{project.usedTech}}</span>
             </div>
+            <img class="backImg" src="../../../assets/img/{{project.imgBlank}}">
 
 
 
