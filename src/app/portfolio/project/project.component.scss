@@ -1,6 +1,6 @@
 section {
-    width: 100%;
-    height: 100%;
+    width: 47.5%;
+    aspect-ratio: 1 / 1;
     border: solid 1px #70e61c;
     border-radius: 15px;
     background-color: #141c2e;
@@ -10,5 +10,93 @@ section {
     >img {
         max-width: 95%;
         max-height: 95%;
+    }
+}
+
+section:hover {
+    >img{
+        display: none;
+    }
+
+    .hover {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        div:nth-child(2){
+            background-color: white;
+            height: 60%;
+            border-radius: 15px;
+            gap: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+            >h2{
+                text-align: center;
+                font-size: 32px;
+                color: #9747ff;
+                margin-top: 36px;
+            }
+
+            >p{
+                text-align: center;
+                color: black;
+                font-size: 20px;
+            }
+
+            >span {
+                color: #70e61c;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.hover {
+    display: none;
+}
+
+.projects {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    width: 100%;
+}
+
+a {
+    color: white;
+    height: 58px;
+    width: 137px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40%;
+}
+
+.git{
+    background-color: transparent;
+    border: solid 1px #1cd8e6;
+
+    &:hover {
+        transition: all 200ms ease-in;
+        background-color: #1cd8e6;
+    }
+}
+
+.projectLink{
+    background-color: #9747ff;
+
+    &:hover {
+        transition: all 200ms ease-in;
+        background-color: #70e61c;
     }
 }

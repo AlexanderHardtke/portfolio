@@ -107,16 +107,3 @@ nav {
         color: #1CDAE6;
     }
 }
-
-.projects {
-    margin-top: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    width: 100%;
-
-    >app-project {
-        width: 47.5%;
-        aspect-ratio : 1 / 1;
-    }
-}
