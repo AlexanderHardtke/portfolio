@@ -92,7 +92,7 @@ h1 {
     }
 }
 
-nav{
+nav {
     margin-top: 32px;
     display: flex;
     justify-content: center;
@@ -105,5 +105,18 @@ nav{
 
     >li:active {
         color: #1CDAE6;
+    }
+}
+
+.projects {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    width: 100%;
+
+    >app-project {
+        width: 47.5%;
+        aspect-ratio : 1 / 1;
     }
 }

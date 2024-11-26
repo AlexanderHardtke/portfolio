@@ -14,6 +14,7 @@ img {
 
 div {
     display: flex;
+    align-items: center;
     gap: 29px;
     >a {
         cursor: pointer;
@@ -21,6 +22,19 @@ div {
     }
     >a:hover {
         color: #70e61c;
+    }
+
+    img {
+        border-radius: 4px;
+        height: auto;
+        width: 50px;
+        filter: grayscale(1);
+        transition: all 125ms ease-in;
+    }
+
+    img:hover {
+        filter: grayscale(0);
+        transition: all 125ms ease-in;
     }
 }
 
