@@ -1,12 +1,16 @@
 section {
     background-color: #141c2e;
-    min-height: 100vh;
+    background-image: url(../../assets/img/background/shadows8.png);
+    background-repeat: no-repeat;
+    background-position: 60vw -36px;
+    min-height: 1120px;
+    z-index: 2;
 
     >div {
         display: flex;
         justify-content: space-between;
 
-        >div{
+        >div {
             width: 45%;
         }
     }
@@ -25,6 +29,7 @@ form {
         border-radius: 10px;
         background-color: #141c2e;
         font-size: 16px;
+        height: 50px;
     }
 
     >textarea {
@@ -33,6 +38,10 @@ form {
         border-radius: 10px;
         background-color: #141c2e;
         font-size: 16px;
+        height: 202px;
+        resize: none;
+        resize: vertical;
+        max-height: 400px;
     }
 }
 
@@ -41,6 +50,7 @@ h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding-top: 160px;
 
     >hr {
         position: absolute;
@@ -54,16 +64,20 @@ label {
     font-size: 14px;
 
     >input {
-        border: solid 2px #70e61c;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
     }
-
+    
     >a {
         font-size: 14px;
         color: #9747ff;
         cursor: pointer;
     }
 
-    >a:hover{
+    >a:hover {
         text-decoration: underline;
     }
 }
@@ -84,4 +98,10 @@ button {
         height: 64px;
         background-color: #9747ff;
     }
+}
+
+img {
+    position: absolute;
+    right: 100px;
+    margin-top: 48px;
 }
