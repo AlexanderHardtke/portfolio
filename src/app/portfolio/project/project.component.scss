@@ -4,4 +4,11 @@ section {
     border: solid 1px #70e61c;
     border-radius: 15px;
     background-color: #141c2e;
+    z-index: 1;
+    position: relative;
+
+    >img {
+        max-width: 95%;
+        max-height: 95%;
+    }
 }

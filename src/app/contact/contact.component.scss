@@ -24,16 +24,18 @@ form {
     gap: 32px;
 
     >input {
-        width: 100%;
+        width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
         background-color: #141c2e;
         font-size: 16px;
         height: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     >textarea {
-        width: 100%;
+        width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
         background-color: #141c2e;
@@ -41,7 +43,10 @@ form {
         height: 202px;
         resize: none;
         resize: vertical;
-        max-height: 400px;
+        max-height: 360px;
+        padding: 15px 25px 15px 25px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 
