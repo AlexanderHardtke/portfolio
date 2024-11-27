@@ -103,14 +103,3 @@ button {
         background-color: #9747ff;
     }
 }
-
-img {
-    position: absolute;
-    right: 100px;
-    margin-top: 48px;
-
-    &:hover {
-        filter: invert(38%) sepia(78%) saturate(499%) hue-rotate(75deg) brightness(91%) contrast(100%);
-        cursor: pointer;
-    }
-}

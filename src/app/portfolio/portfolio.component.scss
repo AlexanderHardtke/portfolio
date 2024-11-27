@@ -98,13 +98,26 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
-    >li {
+    >h3 {
         color: #70e61c;
-        padding-left: 10px;
+        font-size: 20px;
     }
 
-    >li:active {
+    >h3:active {
         color: #1CDAE6;
+    }
+
+    >img{
+        padding: 7px;
+        border-radius: 50%;
+        border: solid 2px transparent;
+        cursor: pointer;
+        width: 22px;
+    }
+
+    >img:hover{
+        border: solid 2px #70e61c;
     }
 }

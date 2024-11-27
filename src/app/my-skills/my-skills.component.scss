@@ -12,6 +12,10 @@ section {
     }
 }
 
+aside {
+    margin-top: -129px;
+  }
+
 .hero {
     position: absolute;
     top: -300px;
@@ -88,11 +92,18 @@ section {
         margin-top: 10px;
         text-align: center;
     }
+
+    >img{
+        transition-duration: 200ms;
+    }
+
+    >img:hover{
+        transform:translateY(-12px);
+    }
 }
 
 .cont-learn {
     align-self: flex-end;
-    position: absolute;
 }
 
 a {

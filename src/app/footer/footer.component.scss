@@ -1,20 +1,5 @@
 section {
     background-color: #141c2e;
-
-    >a {
-        display: block;
-        position: relative;
-        bottom: -171px;
-        height: 0px;
-        font-size: 16px;
-        cursor: pointer;
-    
-        &:hover .green-line {
-            left: 0;
-            width: 56px;
-            border: solid 1px #70e61c;
-        }
-    }
     
     .green-line {
         position: absolute;
@@ -31,6 +16,17 @@ section {
         height: 290px;
     }
 }
+
+.navArrow {
+        position: absolute;
+        right: 100px;
+        margin-top: -92px;
+    
+        &:hover {
+            filter: invert(38%) sepia(78%) saturate(499%) hue-rotate(75deg) brightness(91%) contrast(100%);
+            cursor: pointer;
+        }
+    }
 
 hr {
     width: calc(100% + 200px);
@@ -56,5 +52,20 @@ hr {
     img:hover {
         transition: height 125ms ease-in-out;
         height: 40px;
+    }
+}
+
+.legal {
+    display: block;
+    position: relative;
+    bottom: -171px;
+    height: 0px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover .green-line {
+        left: 0;
+        width: 56px;
+        border: solid 1px #70e61c;
     }
 }
