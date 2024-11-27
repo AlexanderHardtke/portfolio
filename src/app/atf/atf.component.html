@@ -1,8 +1,9 @@
 <section class="sec-pad">
 
-        <img src="../../assets/img/background/shadow2.png">
-
+    <img src="../../assets/img/background/shadow2.png">
     <div class="dGrid">
+
+        @if (portData.lang == "en") {
         <div class="btnDiv">
             <div class="dFlexCenter">
                 <p>I am</p>
@@ -13,6 +14,20 @@
             </div>
             <button>Let's talk!</button>
         </div>
+
+        } @else {
+        <div class="btnDiv">
+            <div class="dFlexCenter">
+                <p>Ich bin</p>
+                <div class="intro">
+                    <h1>Alexander Hardtke</h1>
+                    <h2>FRONTEND ENTWICKLER</h2>
+                </div>
+            </div>
+            <button>Reden wir!</button>
+        </div>
+        }
+
     </div>
 
     <div class="socialMedia">

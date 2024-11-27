@@ -2,15 +2,17 @@
     <img src="../../assets/img/icons/AlexanderLogo.png">
 
     <div>
-        @if (lang == "en") {
+        @if (portData.lang == "en") {
         <a href="#aboutMe">About me</a>
         <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
         } @else {
         <a href="#aboutMe">Über mich</a>
+        <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
         }
 
-        <a (click)="setLang('en')"  [ngClass]="{'inactiveLang' : lang == 'ger'}"><img src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
-        <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : lang == 'en'}"><img src="../../assets/img/icons/Flag_of_Germany.svg"></a>
+        <a (click)="setLang('en')"  [ngClass]="{'inactiveLang' : portData.lang == 'ger'}"><img src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
+        <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : portData.lang == 'en'}"><img src="../../assets/img/icons/Flag_of_Germany.svg"></a>
     </div>
 </section>

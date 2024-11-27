@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfoliodataService } from '../portfoliodata.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
+  portData = inject(PortfoliodataService);
 
 }

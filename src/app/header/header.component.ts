@@ -1,5 +1,6 @@
 import { CommonModule} from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfoliodataService } from '../portfoliodata.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  lang: "en" | "ger";
-
-  constructor() {
-    this.lang = "en";
-  }
+  portData = inject(PortfoliodataService);
 
   setLang(lang: string) {
     if (lang == "ger" || lang == "en") {
-      this.lang = lang;
+      this.portData.lang = lang;
     }
       
   }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfoliodataService } from '../../portfoliodata.service';
 
 @Component({
   selector: 'app-project',
@@ -8,13 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-
+  portData = inject(PortfoliodataService);
 
   projects = [
     {
       name: "Sharkie",
-      imgDevice:"project_sharkie.png",
-      imgBlank:"sharkie_desktop.png",
+      imgDevice: "project_sharkie.png",
+      imgBlank: "sharkie_desktop.png",
       descriptionEng: "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.",
       descriptionGer: "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie dabei, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.",
       usedTech: "JavaScript | HTML | CSS",
@@ -23,8 +24,8 @@ export class ProjectComponent {
     },
     {
       name: "Pokedex",
-      imgDevice:"project_pokedex.png",
-      imgBlank:"pokedex_desktop.png",
+      imgDevice: "project_pokedex.png",
+      imgBlank: "pokedex_desktop.png",
       descriptionEng: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
       descriptionGer: "Basierend auf der PokéAPI. Eine einfache Bibliothek die Pokemondaten bereitstellt und katalogisiert.",
       usedTech: "JavaScript | HTML | CSS | API",
@@ -33,8 +34,8 @@ export class ProjectComponent {
     },
     {
       name: "Join",
-      imgDevice:"project_sharkie.png",
-      imgBlank:"sharkie_desktop.png",
+      imgDevice: "project_sharkie.png",
+      imgBlank: "sharkie_desktop.png",
       descriptionEng: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       descriptionGer: "Taskmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
       usedTech: "JavaScript | HTML | CSS | Firebase",
@@ -43,8 +44,8 @@ export class ProjectComponent {
     },
     {
       name: "DABubble",
-      imgDevice:"#",
-      imgBlank:"sharkie_desktop.png",
+      imgDevice: "#",
+      imgBlank: "sharkie_desktop.png",
       descriptionEng: "description english",
       descriptionGer: "Beschreibung deutsch",
       usedTech: "GitHub",
