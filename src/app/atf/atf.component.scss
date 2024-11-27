@@ -1,5 +1,5 @@
 section {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 109px);
     background-color: #141c2e;
     background-image: url(../../assets/img/background/shadow9.png);
     background-repeat: no-repeat;
@@ -118,5 +118,9 @@ h1 {
     >img {
         padding-top: 12px;
         rotate: -90deg;
+    }
+
+    span {
+        font-size: 23px;
     }
 }

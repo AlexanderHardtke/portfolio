@@ -3,7 +3,7 @@ section {
     background-image: url(../../assets/img/background/shadows8.png);
     background-repeat: no-repeat;
     background-position: 60vw -36px;
-    min-height: 1120px;
+    min-height: calc(100vh - 109px);
     z-index: 2;
 
     >div {

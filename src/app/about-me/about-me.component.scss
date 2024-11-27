@@ -11,9 +11,8 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 2;
     width: calc(100% - 200px);
-    min-height: 100vh;
+    min-height: calc(100vh - 109px)
 }
 
 .about-me {
@@ -21,13 +20,29 @@ section {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    z-index: 3;
 
     >div {
         display: flex;
-        gap: 26px;
-
-        >img {
+        align-items: center;
+        
+        >var {
             height: 48px;
+            min-width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 26px;
+
+            >img {
+                height: 32px;
+                transition: all 150ms ease-in-out;
+            }
+    
+            >img:hover {
+                height: 48px;
+                transition: all 150ms ease-in-out;
+            }
         }
     }
 }

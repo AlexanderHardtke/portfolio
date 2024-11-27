@@ -1,7 +1,7 @@
 section {
     background-color: #141c2e;
 
-    a {
+    >a {
         display: block;
         position: relative;
         bottom: -171px;
@@ -47,13 +47,13 @@ hr {
     gap: 42px;
     width: 190px;
 
-    >img {
+    img {
         cursor: pointer;
         height: 30px;
         transition: height 125ms ease-in-out;
     }
 
-    >img:hover {
+    img:hover {
         transition: height 125ms ease-in-out;
         height: 40px;
     }

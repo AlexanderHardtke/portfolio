@@ -4,9 +4,15 @@
   font-family: 'Poppins';
   margin: 0;
   color: white;
-  font-size: 23px;
+  font-size: 16px;
   scroll-behavior: smooth;
 
+}
+
+aside {
+  position: absolute;
+  margin-top: -109px;
+  z-index: -1
 }
 
 h1 {
