@@ -16,10 +16,13 @@ div {
     display: flex;
     align-items: center;
     gap: 29px;
+
     >a {
         cursor: pointer;
         font-size: 23px;
+        text-decoration: none;
     }
+
     >a:hover {
         color: #70e61c;
     }
@@ -28,13 +31,12 @@ div {
         border-radius: 4px;
         height: auto;
         width: 50px;
-        filter: grayscale(1);
         transition: all 125ms ease-in;
-    }
-
-    img:hover {
         filter: grayscale(0);
-        transition: all 125ms ease-in;
     }
 }
 
+.inactiveLang {
+    filter: grayscale(1);
+    transition: all 125ms ease-in;
+}
