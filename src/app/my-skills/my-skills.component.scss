@@ -1,9 +1,15 @@
 section {
     background-color: #141c2e;
     width: calc(100% - 200px);
+    min-height: calc(100vh - 20px);
     position: relative;
     display: flex;
     overflow-x: clip;
+    padding-top: 20px;
+
+    >div{
+        padding-bottom: 100px;
+    }
 }
 
 .hero {
@@ -32,7 +38,6 @@ section {
     z-index: 2;
     gap: 80px;
     height: 645px;
-    width: 60%;
 }
 
 .skills {
@@ -44,7 +49,7 @@ section {
     z-index: 2;
     padding-left: 80px;
     gap: 1px;
-    width: 40%;
+    width: 80%;
     gap: 40px;
 
     h1 {
@@ -90,18 +95,18 @@ section {
     position: absolute;
 }
 
-button {
+a {
     background-color: #70E61C;
     color: white;
     height: 58px;
     width: 200px;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 250ms ease-out;
+    transition: all 200ms ease-out;
     border: none;
 
     &:hover {
-        transition: all 250ms ease-in;
+        transition: all 200ms ease-in;
         width: 220px;
         height: 64px;
         background-color: #9747ff;

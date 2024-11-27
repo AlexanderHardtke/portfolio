@@ -21,48 +21,52 @@ section {
     position: relative;
     top: 200px;
     z-index: 2;
+
+    a {
+        background-color: #70E61C;
+        color: white;
+        height: 58px;
+        width: 165px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 44px;
+        transition: all 200ms ease-out;
+        border: none;
+    
+        &:hover {
+    
+            transition: all 200ms ease-in;
+            width: 180px;
+            height: 64px;
+            background-color: #9747ff;
+        }
+    }
 }
 
 p {
     rotate: -90deg;
     background-color: transparent;
     font-size: 64px;
+    width: 213px;
+    text-align: center;
+    margin-right: -36px;
 }
 
 h1 {
     margin-block-start: -10px;
-    margin-block-end: -34px;
-}
-
-button {
-    background-color: #70E61C;
-    color: white;
-    height: 58px;
-    width: 165px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 44px;
-    transition: all 250ms ease-out;
-    border: none;
-
-    &:hover {
-
-        transition: all 250ms ease-in;
-        width: 180px;
-        height: 64px;
-        background-color: #9747ff;
-    }
+    margin-block-end: -16px;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    height: 213px;
 
     >h2 {
         font-size: 58px;
         color: #9747ff;
-        margin-block-end: -4px;
         font-weight: 400;
     }
 }
@@ -76,10 +80,23 @@ button {
     gap: 32px;
     z-index: 2;
 
-    >img {
-        height: 30px;
-        width: 30px;
-        cursor: pointer;
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 190px;
+        height: 40px;
+
+        img {
+            height: 30px;
+            cursor: pointer;
+            transition: height 125ms ease-in-out;
+        }
+    
+        img:hover {
+            transition: height 125ms ease-in-out;
+            height: 40px;
+        }
     }
 
     hr {

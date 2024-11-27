@@ -2,7 +2,6 @@ section {
     background-color: #141c2e;
     min-height: 100vh;
     width: calc(100% - 200px);
-    padding-top: 200px;
     overflow-x: hidden;
 }
 
@@ -94,6 +93,7 @@ h1 {
 
 nav {
     margin-top: 32px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
