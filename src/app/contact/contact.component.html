@@ -1,18 +1,32 @@
 <section class="sec-pad">
     <aside id="contact"></aside>
 
+    @if (portData.lang == "en") {
     <h1>Contact
         <hr>
     </h1>
+    } @else {
+    <h1>Kontakt
+        <hr>
+    </h1>
+    }
 
     <div>
         <div>
+            @if (portData.lang == "en") {
             <h2>Got a problem to solve?</h2>
 
             <p>Contact me through this form, i am interested in hearing from you, knowing your ideas and contributing to
                 your projects with my work.</p>
 
             <p>Need a Frontend developer?<b> Contact me!</b></p>
+            } @else {
+            <h2>Sie haben ein Problem zu lösen?</h2>
+
+            <p>Kontaktieren sie mich über dieses Formular, ich freue mich darauf von ihnen zu hören, ihre Ideen kennenzulernen und mit meiner Arbeit zu ihren Projekten beizutragen.</p>
+
+            <p>Sie brauchen einen Frontend Entwickler?<b> Konatkieren sie mich!</b></p>
+            }
         </div>
 
         <form>
@@ -21,10 +35,18 @@
             <textarea placeholder="Your message"></textarea>
             <label for="policy">
                 <input type="checkbox" id="policy">
-                I've read the <a>privacy policy</a> and agree to the processong of my data as outlined
+                @if (portData.lang == "en") {
+                I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
+                } @else {
+                Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,eomer Daten woe darin beschrieben zu.
+                }
                 <span class="checkmark"></span>
-              </label>
+            </label>
+            @if (portData.lang == "en") {
             <button>Send message :)</button>
+            } @else {
+            <button>Nachricht abschicken :)</button>
+            }
         </form>
 
     </div>
