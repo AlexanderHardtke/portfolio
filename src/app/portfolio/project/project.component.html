@@ -12,8 +12,11 @@
 
             <div>
                 <h2>{{project.name}}</h2>
+                @if (portData.lang == "en") {
                 <p>{{project.descriptionEng}}</p>
-                <!-- <p>{{project.descriptionGer}}</p> -->
+                } @else {
+                <p>{{project.descriptionGer}}</p>
+                }
                 <span class="dFlexCenter">{{project.usedTech}}</span>
             </div>
             <img class="backImg" src="../../../assets/img/{{project.imgBlank}}">

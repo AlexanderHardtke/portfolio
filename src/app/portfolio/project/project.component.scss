@@ -10,7 +10,7 @@ section {
     >img {
         pointer-events: none;
         position: absolute;
-        min-width: 80%;
+        min-width: 85%;
         max-width: 95%;
         max-height: 95%;
         transition: all 200ms ease-in-out;
@@ -84,6 +84,8 @@ a {
     cursor: pointer;
     transition: all 125ms ease-in;
     border: none;
+    text-decoration: none;
+    font-size: 23px;
 }
 
 .buttons {

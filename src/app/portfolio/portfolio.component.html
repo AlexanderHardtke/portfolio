@@ -5,7 +5,11 @@
         <hr>Portfolio
     </h1>
 
+    @if (portData.lang == "en") {
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    } @else {
+        <p>Anbei eine Auswahl meiner Projekte - Interagieren sie mit den Projekten um meine Skills in Aktion zu sehen.</p>
+    }
     <img class="green-shadow" src="../../assets/img/background/shadow3.png">
         <app-project></app-project>
 
