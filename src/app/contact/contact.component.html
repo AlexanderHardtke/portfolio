@@ -31,11 +31,11 @@
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-            <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+            <input [(ngModel)]="contactData.name" type="text" id="name" minlength="3" name="name" placeholder="Your name" required>
 
             <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" placeholder="Your message" required></textarea>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" name="message" placeholder="Your message" required></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
                 <span class="error">Please enter a message</span>
             }
