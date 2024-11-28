@@ -7,14 +7,14 @@ section {
     overflow-x: clip;
     padding-top: 20px;
 
-    >div{
+    >div {
         padding-bottom: 100px;
     }
 }
 
 aside {
     margin-top: -129px;
-  }
+}
 
 .hero {
     position: absolute;
@@ -28,7 +28,7 @@ aside {
 .blue-shadow {
     position: absolute;
     right: -420px;
-    top: 750px;
+    top: 600px;
     margin-left: -100px;
     z-index: 0;
 }
@@ -93,12 +93,12 @@ aside {
         text-align: center;
     }
 
-    >img{
+    >img {
         transition-duration: 200ms;
     }
 
-    >img:hover{
-        transform:translateY(-12px);
+    >img:hover {
+        transform: translateY(-12px);
     }
 }
 
@@ -115,6 +115,8 @@ a {
     cursor: pointer;
     transition: all 200ms ease-out;
     border: none;
+    text-decoration: none;
+    font-size: 23px;
 
     &:hover {
         transition: all 200ms ease-in;
@@ -126,4 +128,5 @@ a {
 
 p {
     font-size: 16px;
+    width: 100%;
 }

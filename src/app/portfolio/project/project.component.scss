@@ -5,26 +5,23 @@ section {
     border-radius: 15px;
     background-color: #141c2e;
     position: relative;
+    overflow: hidden;
 
     >img {
+        pointer-events: none;
+        position: absolute;
+        min-width: 80%;
         max-width: 95%;
         max-height: 95%;
-    }
-}
-
-section:hover {
-    >img {
-        scale: 1.5;
-        display: none;
-        transition: all 250ms ease-in-out;
+        transition: all 200ms ease-in-out;
     }
 
     .hoverProject {
+        opacity: 0;
+        transition: all 150ms ease-in-out;
         display: flex;
         flex-direction: column;
         height: 100%;
-        z-index: 1;
-        transition: all 250ms ease-in-out;
         
         div:nth-child(2) {
             background-color: white;
@@ -35,6 +32,7 @@ section:hover {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            z-index: 2;
 
             >h2 {
                 text-align: center;
@@ -57,9 +55,17 @@ section:hover {
     }
 }
 
-.hoverProject {
-    display: none;
-    transition: all 250ms ease-in-out;
+section:hover {
+    >img {
+        scale: 1.7;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+
+    .hoverProject {
+        opacity: 1;
+        transition: all 150ms ease-in-out;
+    }
 }
 
 .projects {
@@ -76,7 +82,7 @@ a {
     width: 137px;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 200ms ease-in;
+    transition: all 125ms ease-in;
     border: none;
 }
 
@@ -87,6 +93,7 @@ a {
     height: 40%;
     min-height: 30%;
     background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .git {
@@ -94,7 +101,7 @@ a {
     border: solid 1px #1cd8e6;
 
     &:hover {
-        transition: all 200ms ease-in;
+        transition: all 125ms ease-in;
         background-color: #1cd8e6;
     }
 }
@@ -103,7 +110,7 @@ a {
     background-color: #9747ff;
 
     &:hover {
-        transition: all 200ms ease-in;
+        transition: all 125ms ease-in;
         background-color: #70e61c;
     }
 }
@@ -116,5 +123,4 @@ a {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
-    z-index: -1;
 }

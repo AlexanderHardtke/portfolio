@@ -74,7 +74,7 @@ label {
         height: 0;
         width: 0;
     }
-    
+
     >a {
         font-size: 14px;
         color: #9747ff;
@@ -95,6 +95,7 @@ button {
     cursor: pointer;
     transition: all 250ms ease-out;
     border: none;
+    font-size: 23px;
 
     &:hover {
         transition: all 250ms ease-in;
