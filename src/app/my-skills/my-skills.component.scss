@@ -27,10 +27,15 @@ aside {
 
 .blue-shadow {
     position: absolute;
-    right: -420px;
+    right: -620px;
     top: 600px;
     margin-left: -100px;
     z-index: 0;
+    transition: right 600ms ease-in-out; 
+}
+
+.blue-shadow.active {
+  right: -420px;
 }
 
 .icons {

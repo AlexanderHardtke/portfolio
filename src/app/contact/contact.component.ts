@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -10,6 +10,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  @ViewChild('purpleShadow') purpleShadow!: ElementRef<HTMLImageElement>;
+  @ViewChild('contact') contactSection!: ElementRef<HTMLElement>;
   portData = inject(PortfoliodataService);
   contactData = {
     name: "",
@@ -17,8 +19,10 @@ export class ContactComponent {
     message: ""
   };
 
-
+  private scrollListener: (() => void) | null = null;
   mailTest = true;
+
+  constructor(private renderer: Renderer2) {}
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -32,21 +36,58 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    //   this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    //     .subscribe({
+    //       next: (response) => {
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    //         ngForm.resetForm();
+    //       },
+    //       error: (error) => {
+    //         console.error(error);
+    //       },
+    //       complete: () => console.info('send post complete'),
+    //     });
+    // } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-      ngForm.resetForm();
+    //   ngForm.resetForm();
+    // }
+  }
+
+  ngOnInit() {
+    this.scrollListener = this.handleScroll.bind(this);
+    window.addEventListener('scroll', this.scrollListener);
+  }
+
+  ngOnDestroy() {
+    if (this.scrollListener) {
+      window.removeEventListener('scroll', this.scrollListener);
+    }
+  }
+
+  private isInViewport(element: HTMLElement, topOffset: number = 0, bottomOffset: number = 0): boolean {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= -topOffset &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + bottomOffset &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  private handleScroll() {
+    if (this.contactSection && this.purpleShadow) {
+      const skillsElement = this.contactSection.nativeElement;
+      const imageElement = this.purpleShadow.nativeElement;
+  
+      if (this.isInViewport(skillsElement, 1000, 850)) {
+        console.log("geht");
+        
+        this.renderer.addClass(imageElement, 'active');
+      } else {
+        console.log("geht nicht");
+        this.renderer.removeClass(imageElement, 'active');
+      }
     }
   }
 }

@@ -8,10 +8,15 @@ section {
 
 .green-shadow {
     position: absolute;
-    left: -550px;
+    left: -850px;
     transform: rotateX(180deg);
     padding-bottom: 490px;
+    transition: left 600ms ease-in-out;
 }
+
+.green-shadow.active {
+    left: -550px;
+  }
 
 p {
     font-size: 16px;
@@ -95,7 +100,6 @@ h1 {
 
 nav {
     margin-top: 32px;
-    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
