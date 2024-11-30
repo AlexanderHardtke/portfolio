@@ -34,8 +34,8 @@ export class ProjectComponent {
     },
     {
       name: "Join",
-      imgDevice: "project_sharkie.png",
-      imgBlank: "sharkie_desktop.png",
+      imgDevice: "project_join.png",
+      imgBlank: "join_desktop.png",
       descriptionEng: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       descriptionGer: "Taskmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
       usedTech: "JavaScript | HTML | CSS | Firebase",
