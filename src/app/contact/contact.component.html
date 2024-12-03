@@ -60,7 +60,7 @@
             }
 
             <label for="policy">
-                <input [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy" [checked]="contactData.privacyPolicy == true">
+                <input [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy" (change)="contactData.privacyPolicy = !contactData.privacyPolicy">
                 <img src="../../assets/img/icons/check_box_unchecked.png">
                 <img class="checked" src="../../assets/img/icons/check_box_checked.png">
                 @if (portData.lang == "en") {
