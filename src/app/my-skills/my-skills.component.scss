@@ -31,11 +31,11 @@ aside {
     top: 600px;
     margin-left: -100px;
     z-index: 0;
-    transition: right 600ms ease-in-out; 
+    transition: right 600ms ease-in-out;
 }
 
 .blue-shadow.active {
-  right: -420px;
+    right: -420px;
 }
 
 .icons {
@@ -46,7 +46,7 @@ aside {
     flex-wrap: wrap;
     z-index: 2;
     gap: 80px;
-    height: 645px;
+    max-height: 645px;
 }
 
 .skills {
@@ -108,14 +108,85 @@ aside {
 }
 
 .cont-learn {
-    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 101px;
+    margin-top: 80px;
+    position: relative;
+
+    >div {
+        position: absolute;
+        width: 188px;
+        height: 112px;
+        background-color: white;
+        border-radius: 20px;
+        top: -121px;
+        left: 6px;
+        z-index: 4;
+        display: none;
+
+        >img {
+            width: 32px;
+            position: inherit;
+            left: 30px;
+        }
+
+        >span {
+            padding: 4px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    >p {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+.cont-learn:hover {
+    >div{
+        display: block;
+    }
+
+    >img {
+        transition-duration: 200ms;
+    }
+
+    >img:hover {
+        filter: invert(44%) brightness(210%);
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+
+    >b {
+        color: black;
+        font-size: 12px;
+    }
+
+    >img {
+        padding-top: 4px;
+        height: 32px;
+    }
 }
 
 a {
     background-color: #70E61C;
     color: white;
     height: 58px;
-    width: 200px;
+    width: 220px;
     border-radius: 10px;
     cursor: pointer;
     transition: all 200ms ease-out;
@@ -125,7 +196,7 @@ a {
 
     &:hover {
         transition: all 200ms ease-in;
-        width: 220px;
+        width: 240px;
         height: 64px;
         background-color: #9747ff;
     }

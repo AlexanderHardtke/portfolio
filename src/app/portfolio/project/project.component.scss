@@ -6,6 +6,7 @@ section {
     background-color: #141c2e;
     position: relative;
     overflow: hidden;
+    z-index: 3;
 
     >img {
         pointer-events: none;

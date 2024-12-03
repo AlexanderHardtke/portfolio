@@ -1,6 +1,6 @@
 <section class="sec-pad">
     <aside id="portfolio"></aside>
-    
+
     <h1>
         <hr>Portfolio
     </h1>
@@ -8,49 +8,52 @@
     @if (portData.lang == "en") {
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
     } @else {
-        <p>Anbei eine Auswahl meiner Projekte - Interagieren sie mit den Projekten um meine Skills in Aktion zu sehen.</p>
+    <p>Anbei eine Auswahl meiner Projekte - Interagieren sie mit den Projekten um meine Skills in Aktion zu sehen.</p>
     }
-    <img #greenShadow class="green-shadow" src="../../assets/img/background/shadow3.png">
-        <app-project></app-project>
 
-    
+    <app-project></app-project>
 
-    <div>
 
-        <div #feedback class="feedback">
 
-            <img class="quote-img" src="../../assets/img/icons/“.png">
+    <div class="slider" #feedback>
+        <img #greenShadow class="green-shadow" src="../../assets/img/background/shadow3.png">
+        <div>
+            @for(userFeedback of userFeedbacks; track userFeedback.signatur; let index = $index) {
+            <div class="feedback" [ngClass]="{'blurAway': this.feedbackIndex !== index, 'blurIn': this.feedbackIndex == index}">
+                <img class="quote-img" src="../../assets/img/icons/“.png">
 
-            <div class="purple-box">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium maxime illo deserunt impedit ea
-                    quas
-                    recusandae! Unde, recusandae rem placeat aliquam fuga distinctio totam vero! Iste voluptatum dolor
-                    voluptatem veritatis.
-                </p>
+                <div class="purple-box">
+                    @if (portData.lang == "en") {
+                    <p>{{userFeedback.feedbackEng}}</p>
+                    } @else {
+                    <p>{{userFeedback.feedbackGer}}</p>
+                    }
 
-                <div class="signature">
+                    <div class="signature">
+                        <hr>
+                        <p>{{userFeedback.signatur}}</p>
+                    </div>
+
+                </div>
+
+                <div class="evaluator-img">
+                    <img src="../../assets/img/{{userFeedback.imgCollab}}">
                     <hr>
-                    <p>Signature</p>
                 </div>
 
             </div>
-
-            <div class="evaluator-img">
-                <img src="../../assets/img/PA150252.JPG">
-                <hr>
-            </div>
-
+            }
         </div>
 
-
         <nav>
-            <img src="../../assets/img/icons/arrow_back_purple.png">
-            <h3>&bull;</h3>
-            <h3>&bull;</h3>
-            <h3>&bull;</h3>
-            <img src="../../assets/img/icons/arrow_forward_purple.png">
+            <img (click)="prevFeedback()" src="../../assets/img/icons/arrow_back_purple.png">
+            @for (item of userFeedbacks; track item.signatur; let index = $index) {
+            <h3 [ngStyle]="{'color': this.feedbackIndex == index ? '#9747FF' : '#70e61c' }">&bull;</h3>
+            }
+            <img (click)="nextFeedback()" src="../../assets/img/icons/arrow_forward_purple.png">
         </nav>
 
 
     </div>
+
 </section>

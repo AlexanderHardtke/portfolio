@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
 import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  http = inject(HttpClient)
   @ViewChild('purpleShadow') purpleShadow!: ElementRef<HTMLImageElement>;
   @ViewChild('contact') contactSection!: ElementRef<HTMLElement>;
   portData = inject(PortfoliodataService);
@@ -36,22 +39,22 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    //   this.http.post(this.post.endPoint, this.post.body(this.contactData))
-    //     .subscribe({
-    //       next: (response) => {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Funktion für Fenster zur Bestätigung
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-    //         ngForm.resetForm();
-    //       },
-    //       error: (error) => {
-    //         console.error(error);
-    //       },
-    //       complete: () => console.info('send post complete'),
-    //     });
-    // } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-    //   ngForm.resetForm();
-    // }
+      ngForm.resetForm();
+    }
   }
 
   ngOnInit() {
@@ -80,12 +83,9 @@ export class ContactComponent {
       const skillsElement = this.contactSection.nativeElement;
       const imageElement = this.purpleShadow.nativeElement;
   
-      if (this.isInViewport(skillsElement, 1000, 850)) {
-        console.log("geht");
-        
+      if (this.isInViewport(skillsElement, 1000, 750)) {
         this.renderer.addClass(imageElement, 'active');
       } else {
-        console.log("geht nicht");
         this.renderer.removeClass(imageElement, 'active');
       }
     }

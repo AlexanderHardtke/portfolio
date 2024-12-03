@@ -42,15 +42,5 @@ export class ProjectComponent {
       gitHub: "https://github.com/AlexanderHardtke/Join",
       projectLink: "#LinkPrject"
     },
-    {
-      name: "DABubble",
-      imgDevice: "#",
-      imgBlank: "sharkie_desktop.png",
-      descriptionEng: "description english",
-      descriptionGer: "Beschreibung deutsch",
-      usedTech: "GitHub",
-      gitHub: "#LinkGit",
-      projectLink: "#LinkPrject"
-    },
   ]
 }

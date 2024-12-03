@@ -9,14 +9,15 @@ section {
 .green-shadow {
     position: absolute;
     left: -850px;
+    top: -720px;
     transform: rotateX(180deg);
-    padding-bottom: 590px;
     transition: left 600ms ease-in-out;
+    z-index: 2;
 }
 
 .green-shadow.active {
-    left: -550px;
-  }
+    left: -680px;
+}
 
 p {
     font-size: 16px;
@@ -35,7 +36,18 @@ h1 {
     }
 }
 
+.slider {
+    position: relative;
+
+    >div{
+       height: 439px;
+       width: 100%;
+    }
+}
+
 .feedback {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
@@ -46,6 +58,17 @@ h1 {
             padding-bottom: 44px;
         }
     }
+}
+
+.blurAway {
+    filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: all 200ms ;
+}
+
+.blurIn {
+    transition: all 250ms ease-in-out;
 }
 
 .purple-box {
@@ -106,15 +129,10 @@ nav {
     gap: 20px;
 
     >h3 {
-        color: #70e61c;
         font-size: 20px;
     }
 
-    >h3:active {
-        color: #1CDAE6;
-    }
-
-    >img{
+    >img {
         padding: 7px;
         border-radius: 50%;
         border: solid 2px transparent;
@@ -122,7 +140,7 @@ nav {
         width: 22px;
     }
 
-    >img:hover{
+    >img:hover {
         border: solid 2px #70e61c;
     }
 }
