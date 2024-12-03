@@ -62,7 +62,6 @@ h1 {
 
 .blurAway {
     filter: blur(10px);
-    backdrop-filter: blur(10px);
     opacity: 0;
     transition: all 200ms ;
 }

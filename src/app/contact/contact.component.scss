@@ -21,10 +21,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
     z-index: 2;
+    margin-top: -32px;
 
-    >input {
+    >input[type=text],[type=email] {
+        margin-top: 32px;
         width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
@@ -33,9 +34,16 @@ form {
         height: 50px;
         padding-left: 25px;
         padding-right: 25px;
+        outline: none;
+    }
+
+    input:hover,
+    input:focus-visible {
+        border: solid 1px #1CDAE6;
     }
 
     >textarea {
+        margin-top: 32px;
         width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
@@ -48,6 +56,12 @@ form {
         padding: 15px 25px 15px 25px;
         padding-left: 25px;
         padding-right: 25px;
+        outline: none;
+    }
+
+    textarea:hover,
+    textarea:focus-visible {
+        border: solid 1px #1CDAE6;
     }
 }
 
@@ -65,15 +79,34 @@ h1 {
     }
 }
 
+.checked {
+    position: absolute;
+    margin-left: -22px;
+    margin-top: 4px;
+    display: none;
+}
+
 label {
+    margin-top: 32px;
     font-size: 14px;
 
+    >img {
+        margin-bottom: -4px;
+        margin-right: 4px;
+    }
+
     >input {
+        margin-top: 4px;
         position: absolute;
         opacity: 0;
         cursor: pointer;
-        height: 0;
-        width: 0;
+        height: 18px;
+        width: 18px;
+    }
+
+    >input:checked~.checked {
+        display: inline;
+        cursor: pointer;
     }
 
     >a {
@@ -88,6 +121,7 @@ label {
 }
 
 button {
+    margin-top: 32px;
     background-color: #70E61C;
     color: white;
     height: 58px;
@@ -107,8 +141,19 @@ button {
 }
 
 .error {
-    color: red;
+    animation: 250ms fadeIn;
+    animation-fill-mode: forwards;
+    color: #E61C40;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .purple-shadow {
     position: absolute;

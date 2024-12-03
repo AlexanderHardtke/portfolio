@@ -19,7 +19,8 @@ export class ContactComponent {
   contactData = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    privacyPolicy: false,
   };
 
   private scrollListener: (() => void) | null = null;
@@ -39,22 +40,24 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            // Funktion für Fenster zur Bestätigung
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    console.log(this.contactData);
+    
+    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    //   this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    //     .subscribe({
+    //       next: (response) => {
+    //         // Funktion für Fenster zur Bestätigung
+    //         ngForm.resetForm();
+    //       },
+    //       error: (error) => {
+    //         console.error(error);
+    //       },
+    //       complete: () => console.info('send post complete'),
+    //     });
+    // } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-      ngForm.resetForm();
-    }
+    //   ngForm.resetForm();
+    // }
   }
 
   ngOnInit() {

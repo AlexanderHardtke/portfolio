@@ -1,5 +1,5 @@
 <section #contact class="sec-pad">
-    
+
     <aside id="contact"></aside>
     <img #purpleShadow class="purple-shadow" src="../../assets/img/background/shadow8.png">
 
@@ -25,7 +25,8 @@
             } @else {
             <h2>Sie haben ein Problem zu lösen?</h2>
 
-            <p>Kontaktieren sie mich über dieses Formular, ich freue mich darauf von ihnen zu hören, ihre Ideen kennenzulernen und mit meiner Arbeit zu ihren Projekten beizutragen.</p>
+            <p>Kontaktieren sie mich über dieses Formular, ich freue mich darauf von ihnen zu hören, ihre Ideen
+                kennenzulernen und mit meiner Arbeit zu ihren Projekten beizutragen.</p>
 
             <p>Sie brauchen einen Frontend Entwickler?<b> Konatkieren sie mich!</b></p>
             }
@@ -33,24 +34,48 @@
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-            <input [(ngModel)]="contactData.name" type="text" id="name" minlength="3" name="name" placeholder="Your name" required>
+            <input [(ngModel)]="contactData.name" type="text" id="name" minlength="3" name="name"
+                [placeholder]="portData.lang == 'en' ? 'Your name' : 'Ihr Name'" required>
+            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+            <span class="error">Please enter a name</span>
+            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
+            <span class="error">Bitte geben Sie einen Namen an</span>
+            }
 
-            <input [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <input [(ngModel)]="contactData.email" type="email" name="email"
+                [placeholder]="portData.lang == 'en' ? 'Your email' : 'Ihre Email-Adresse'" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+            <span class="error">Please enter a valid email address</span>
+            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
+            <span class="error">Bitte geben Sie eine calide Email-Adresse ein</span>
+            }
 
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" name="message" placeholder="Your message" required></textarea>
-            @if (!message.valid && message.touched && !message.disabled) {
-                <span class="error">Please enter a message</span>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" name="message"
+                [placeholder]="portData.lang == 'en' ? 'Your message' : 'Ihre Nachricht'" required></textarea>
+            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+            <span class="error">Please enter a message</span>
+            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
+            <span class="error">Bitte geben Sie eine Nachricht ein</span>
             }
 
             <label for="policy">
-                <input type="checkbox" id="policy">
+                <input [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy" [checked]="contactData.privacyPolicy == true">
+                <img src="../../assets/img/icons/check_box_unchecked.png">
+                <img class="checked" src="../../assets/img/icons/check_box_checked.png">
                 @if (portData.lang == "en") {
                 I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
                 } @else {
-                Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,meiner Daten wie darin beschrieben zu.
+                Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,meiner Daten wie darin
+                beschrieben zu.
                 }
                 <span class="checkmark"></span>
             </label>
+            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+            <span class="error">Please accept the privacy policy</span>
+            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
+            <span class="error">Bitte aktzeptieren sie die Datenschutzrichtlinien</span>
+            }
             @if (portData.lang == "en") {
             <button>Send message :)</button>
             } @else {
