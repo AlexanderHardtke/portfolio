@@ -20,7 +20,7 @@ export class ProjectComponent {
       descriptionGer: "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie dabei, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen.",
       usedTech: "JavaScript | HTML | CSS",
       gitHub: "https://github.com/AlexanderHardtke/Sharkie",
-      projectLink: "#LinkPrject"
+      projectLink: "https://alexander-hardtke.com/Sharkie/index.html"
     },
     {
       name: "Pokedex",
@@ -30,7 +30,7 @@ export class ProjectComponent {
       descriptionGer: "Basierend auf der PokéAPI. Eine einfache Bibliothek die Pokemondaten bereitstellt und katalogisiert.",
       usedTech: "JavaScript | HTML | CSS | API",
       gitHub: "https://github.com/AlexanderHardtke/Pokedex",
-      projectLink: "#LinkPrject"
+      projectLink: "https://alexander-hardtke.com/Pokedex/index.html"
     },
     {
       name: "Join",
@@ -40,7 +40,7 @@ export class ProjectComponent {
       descriptionGer: "Taskmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
       usedTech: "JavaScript | HTML | CSS | Firebase",
       gitHub: "https://github.com/AlexanderHardtke/Join",
-      projectLink: "#LinkPrject"
+      projectLink: "https://alexander-hardtke.com/Join/index.html"
     },
   ]
 }

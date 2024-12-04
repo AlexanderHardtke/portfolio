@@ -32,7 +32,7 @@ export class ContactComponent {
   constructor(private renderer: Renderer2) {}
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://alexander.hardtke.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -47,7 +47,6 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // Funktion für Fenster zur Bestätigung
             this.sendMailNotification();
             ngForm.resetForm();
           },
@@ -58,8 +57,7 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.sendMailNotification();
-      console.log(this.contactData);
-      // ngForm.resetForm();
+      ngForm.resetForm();
     }
   }
 
