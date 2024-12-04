@@ -14,7 +14,7 @@ import { ConfirmationDialogComponent } from './confirmation/confirmation.compone
 })
 export class ContactComponent {
   showConfirmation: boolean = false;
-  http = inject(HttpClient)
+  http = inject(HttpClient);
   @ViewChild('purpleShadow') purpleShadow!: ElementRef<HTMLImageElement>;
   @ViewChild('contact') contactSection!: ElementRef<HTMLElement>;
   portData = inject(PortfoliodataService);
