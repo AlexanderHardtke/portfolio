@@ -17,14 +17,18 @@
     <div>
         <div>
             @if (portData.lang == "en") {
-            <h2>Got a problem to solve?</h2>
+            <h2>
+                <hr>Got a problem to solve?
+            </h2>
 
             <p>Contact me through this form, i am interested in hearing from you, knowing your ideas and contributing to
                 your projects with my work.</p>
 
             <p>Need a Frontend developer?<b> Contact me!</b></p>
             } @else {
-            <h2>Sie haben ein Problem zu lösen?</h2>
+            <h2>
+                <hr>Sie haben ein Problem zu lösen?
+            </h2>
 
             <p>Kontaktieren sie mich über dieses Formular, ich freue mich darauf von ihnen zu hören, ihre Ideen
                 kennenzulernen und mit meiner Arbeit zu ihren Projekten beizutragen.</p>
@@ -90,36 +94,40 @@
             <span class="error textareaMsg">Bitte geben Sie eine Nachricht ein</span>
             }
 
-            <label for="policy">
-                <input #policy="ngModel" [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy"
-                    name="contactData.privacyPolicy" required>
+            <div class="policyCheck">
+                <label for="policy">
+                    <input #policy="ngModel" [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy"
+                        name="contactData.privacyPolicy" required>
 
-                <img src="../../assets/img/icons/check_box_unchecked.png">
-                <img class="checked" src="../../assets/img/icons/check_box_checked.png">
+                    <img src="../../assets/img/icons/check_box_unchecked.png">
+                    <img class="dNone" src="../../assets/img/icons/check_box_checked.png">
+                    <span class="checkmark"></span>
 
-                @if (portData.lang == "en") {
-                I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
-                } @else {
-                Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,meiner Daten wie darin
-                beschrieben zu.
-                }
+                </label>
 
-                <span class="checkmark"></span>
-
-            </label>
+                <p>
+                    @if (portData.lang == "en") {
+                    I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
+                    } @else {
+                    Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,meiner Daten wie
+                    darin
+                    beschrieben zu.
+                    }
+                </p>
+            </div>
 
             @if (!policy.valid && policy.touched && !policy.disabled && portData.lang == "en" ||
             !privacyPolicy && portData.lang == "en") {
             <span class="error textareaMsg">Please accept the privacy policy</span>
-            } @else if (!policy.valid && policy.touched && !policy.disabled && portData.lang == "ger" || 
+            } @else if (!policy.valid && policy.touched && !policy.disabled && portData.lang == "ger" ||
             !privacyPolicy && portData.lang == "ger") {
             <span class="error textareaMsg">Bitte aktzeptieren sie die Datenschutzrichtlinien</span>
             }
 
             @if (portData.lang == "en") {
-            <button>Send message :)</button>
+            <button [ngClass]="{'greyFilling': !policy.valid}">Send message :)</button>
             } @else {
-            <button>Nachricht senden :)</button>
+            <button [ngClass]="{'greyFilling': !policy.valid}">Nachricht senden :)</button>
             }
         </form>
 

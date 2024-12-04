@@ -78,44 +78,67 @@ h1 {
     }
 }
 
-.checked {
-    position: absolute;
-    margin-left: -22px;
-    margin-top: 4px;
-    display: none;
+h2 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+
+    >hr {
+        border: 2px solid #1CDAE6;
+        width: 68px;
+        position: relative;
+        right: 100px;
+        margin-right: -72px;
+    }
 }
 
-label {
+p {
+    padding-top: 24px;
+}
+
+.policyCheck {
     margin-top: 16px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 
-    >img {
-        margin-bottom: -4px;
-        margin-right: 4px;
+    >label {
+        position: relative;
+        margin-right: 8px;
+        align-self: flex-start;
+
+        >img {
+            position: absolute;
+            margin-top: 4px;
+            cursor: pointer;
+            left: 0;
+        }
     }
 
-    >input {
+    input {
         margin-top: 4px;
-        position: absolute;
         opacity: 0;
         cursor: pointer;
         height: 18px;
         width: 18px;
     }
 
-    >input:checked~.checked {
+    input:checked~.dNone {
         display: inline;
-        cursor: pointer;
     }
 
-    >a {
+    a {
         font-size: 14px;
         color: #9747ff;
         cursor: pointer;
     }
 
-    >a:hover {
+    a:hover {
         text-decoration: underline;
+    }
+
+    p {
+       padding-top: 0; 
     }
 }
 
@@ -168,7 +191,7 @@ button {
     top: 14px;
 }
 
-.textareaMsg{
+.textareaMsg {
     top: 0;
 }
 
@@ -199,6 +222,17 @@ button {
 
 .redBorder {
     border: solid 1px #E61C40 !important;
+}
+
+.greyFilling {
+    background-color: #b5b5b5;
+    cursor: auto;
+
+    &:hover {
+        background-color: #b5b5b5;
+        height: 58px;
+        width: 253px;
+    }
 }
 
 input:-internal-autofill-selected {
