@@ -6,7 +6,22 @@
   color: white;
   font-size: 16px;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #9747ff #141c2e;
+}
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #141c2e;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #9747ff;
+  border-radius: 20px;
+  border: 2px solid #141c2e;
 }
 
 aside {
@@ -60,11 +75,13 @@ h1 {
 
 /* poppins-300 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
-  src: url('../public/assets/fonts/poppins-v21-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/assets/fonts/poppins-v21-latin-300.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* poppins-regular - latin */
@@ -91,11 +108,13 @@ h1 {
 
 /* poppins-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url('../public/assets/fonts/poppins-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/assets/fonts/poppins-v21-latin-500.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* poppins-600 - latin */
@@ -111,11 +130,13 @@ h1 {
 
 /* poppins-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url('../public/assets/fonts/poppins-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('../public/assets/fonts/poppins-v21-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* poppins-800 - latin */
