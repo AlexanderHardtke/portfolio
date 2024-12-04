@@ -22,10 +22,9 @@ form {
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-    margin-top: -32px;
 
-    >input[type=text],[type=email] {
-        margin-top: 32px;
+    >input[type=text],
+    [type=email] {
         width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
@@ -43,7 +42,6 @@ form {
     }
 
     >textarea {
-        margin-top: 32px;
         width: calc(100% - 50px);
         border: solid 1px #9747ff;
         border-radius: 10px;
@@ -57,6 +55,7 @@ form {
         padding-left: 25px;
         padding-right: 25px;
         outline: none;
+        margin-top: -32px;
     }
 
     textarea:hover,
@@ -87,7 +86,7 @@ h1 {
 }
 
 label {
-    margin-top: 32px;
+    margin-top: 16px;
     font-size: 14px;
 
     >img {
@@ -122,6 +121,7 @@ label {
 
 button {
     margin-top: 32px;
+    margin-bottom: 16px;
     background-color: #70E61C;
     color: white;
     height: 58px;
@@ -144,16 +144,47 @@ button {
     animation: 250ms fadeIn;
     animation-fill-mode: forwards;
     color: #E61C40;
+    position: relative;
+    top: -32px;
+}
+
+.inputImg {
+    height: 25px;
+    width: 25px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    position: relative;
+    top: -42px;
+    left: calc(100% - 50px);
+}
+
+.errorImg {
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+}
+
+.textareaTop {
+    top: 14px;
+}
+
+.textareaMsg{
+    top: 0;
+}
+
+.show {
+    opacity: 1;
 }
 
 @keyframes fadeIn {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 .purple-shadow {
     position: absolute;
@@ -164,4 +195,12 @@ button {
 
 .purple-shadow.active {
     right: -280px;
+}
+
+.redBorder {
+    border: solid 1px #E61C40 !important;
+}
+
+input:-internal-autofill-selected {
+    background-color: #141c2e;
 }

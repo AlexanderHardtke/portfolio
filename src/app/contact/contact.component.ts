@@ -2,16 +2,18 @@ import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject 
 import { PortfoliodataService } from '../portfoliodata.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ConfirmationDialogComponent } from './confirmation/confirmation.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule, ConfirmationDialogComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+  showConfirmation: boolean = false;
   http = inject(HttpClient)
   @ViewChild('purpleShadow') purpleShadow!: ElementRef<HTMLImageElement>;
   @ViewChild('contact') contactSection!: ElementRef<HTMLElement>;
@@ -25,6 +27,7 @@ export class ContactComponent {
 
   private scrollListener: (() => void) | null = null;
   mailTest = true;
+  privacyPolicy = true;
 
   constructor(private renderer: Renderer2) {}
 
@@ -40,24 +43,31 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log(this.contactData);
-    
-    // if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    //   this.http.post(this.post.endPoint, this.post.body(this.contactData))
-    //     .subscribe({
-    //       next: (response) => {
-    //         // Funktion für Fenster zur Bestätigung
-    //         ngForm.resetForm();
-    //       },
-    //       error: (error) => {
-    //         console.error(error);
-    //       },
-    //       complete: () => console.info('send post complete'),
-    //     });
-    // } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            // Funktion für Fenster zur Bestätigung
+            this.sendMailNotification();
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      this.sendMailNotification();
+      console.log(this.contactData);
+      // ngForm.resetForm();
+    }
+  }
 
-    //   ngForm.resetForm();
-    // }
+  sendMailNotification() {
+    this.showConfirmation = true;
+    setTimeout(() => {
+      this.showConfirmation = false;
+    }, 3000);
   }
 
   ngOnInit() {

@@ -22,6 +22,7 @@ section {
         position: absolute;
         right: 100px;
         margin-top: -92px;
+        z-index: 3;
     
         &:hover {
             filter: invert(38%) sepia(78%) saturate(499%) hue-rotate(75deg) brightness(91%) contrast(100%);

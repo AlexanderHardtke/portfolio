@@ -48,7 +48,7 @@
         <nav>
             <img (click)="prevFeedback()" src="../../assets/img/icons/arrow_back_purple.png">
             @for (item of userFeedbacks; track item.signatur; let index = $index) {
-            <h3 [ngStyle]="{'color': this.feedbackIndex == index ? '#9747FF' : '#70e61c' }">&bull;</h3>
+            <h3 [ngStyle]="{'color': this.feedbackIndex == index ? '#1CDAE6' : '#70e61c' }">&bull;</h3>
             }
             <img (click)="nextFeedback()" src="../../assets/img/icons/arrow_forward_purple.png">
         </nav>

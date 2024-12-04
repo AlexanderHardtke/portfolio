@@ -1,4 +1,5 @@
 <section #contact class="sec-pad">
+    <app-confirmation [visible]="showConfirmation"></app-confirmation>
 
     <aside id="contact"></aside>
     <img #purpleShadow class="purple-shadow" src="../../assets/img/background/shadow8.png">
@@ -34,48 +35,87 @@
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-            <input [(ngModel)]="contactData.name" type="text" id="name" minlength="3" name="name"
+
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" minlength="3" name="name"
+                [ngClass]="{'redBorder': !name.valid && name.touched && !name.disabled}"
                 [placeholder]="portData.lang == 'en' ? 'Your name' : 'Ihr Name'" required>
-            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+
+            <div class="inputImg">
+                <img [ngClass]="{'show': name.valid && name.touched}" class="errorImg"
+                    src="../../assets/img/icons/checkedInput.png">
+                <img [ngClass]="{'show': !name.valid && name.touched && !name.disabled}" class="errorImg"
+                    src="../../assets/img/icons/failedInput.png">
+            </div>
+
+            @if (!name.valid && name.touched && !name.disabled && portData.lang == "en") {
             <span class="error">Please enter a name</span>
-            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
+            } @else if (!name.valid && name.touched && !name.disabled && portData.lang == "ger") {
             <span class="error">Bitte geben Sie einen Namen an</span>
             }
 
-            <input [(ngModel)]="contactData.email" type="email" name="email"
+
+            <input #mail="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
+                [ngClass]="{'redBorder': !mail.valid && mail.touched && !mail.disabled}"
                 [placeholder]="portData.lang == 'en' ? 'Your email' : 'Ihre Email-Adresse'" required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
+
+            <div class="inputImg">
+                <img [ngClass]="{'show': mail.valid && mail.touched}" class="errorImg"
+                    src="../../assets/img/icons/checkedInput.png">
+                <img [ngClass]="{'show': !mail.valid && mail.touched && !mail.disabled}" class="errorImg"
+                    src="../../assets/img/icons/failedInput.png">
+            </div>
+
+            @if (!mail.valid && mail.touched && !mail.disabled && portData.lang == "en") {
             <span class="error">Please enter a valid email address</span>
-            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
-            <span class="error">Bitte geben Sie eine calide Email-Adresse ein</span>
+            } @else if (!mail.valid && mail.touched && !mail.disabled && portData.lang == "ger") {
+            <span class="error">Bitte geben Sie eine valide Email-Adresse ein</span>
             }
 
+
+            <div class="inputImg textareaTop">
+                <img [ngClass]="{'show': message.valid && message.touched}" class="errorImg"
+                    src="../../assets/img/icons/checkedInput.png">
+                <img [ngClass]="{'show': !message.valid && message.touched && !message.disabled}" class="errorImg"
+                    src="../../assets/img/icons/failedInput.png">
+            </div>
+
             <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="4" name="message"
+                [ngClass]="{'redBorder': !message.valid && message.touched && !message.disabled}"
                 [placeholder]="portData.lang == 'en' ? 'Your message' : 'Ihre Nachricht'" required></textarea>
+
             @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
-            <span class="error">Please enter a message</span>
+            <span class="error textareaMsg">Please enter a message</span>
             } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
-            <span class="error">Bitte geben Sie eine Nachricht ein</span>
+            <span class="error textareaMsg">Bitte geben Sie eine Nachricht ein</span>
             }
 
             <label for="policy">
-                <input [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy" (change)="contactData.privacyPolicy = !contactData.privacyPolicy">
+                <input #policy="ngModel" [(ngModel)]="contactData.privacyPolicy" type="checkbox" id="policy"
+                    name="contactData.privacyPolicy" required>
+
                 <img src="../../assets/img/icons/check_box_unchecked.png">
                 <img class="checked" src="../../assets/img/icons/check_box_checked.png">
+
                 @if (portData.lang == "en") {
                 I've read the <a>privacy policy</a> and agree to the processing of my data as outlined
                 } @else {
                 Ich habe die <a>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung ,meiner Daten wie darin
                 beschrieben zu.
                 }
+
                 <span class="checkmark"></span>
+
             </label>
-            @if (!message.valid && message.touched && !message.disabled && portData.lang == "en") {
-            <span class="error">Please accept the privacy policy</span>
-            } @else if (!message.valid && message.touched && !message.disabled && portData.lang == "ger") {
-            <span class="error">Bitte aktzeptieren sie die Datenschutzrichtlinien</span>
+
+            @if (!policy.valid && policy.touched && !policy.disabled && portData.lang == "en" ||
+            !privacyPolicy && portData.lang == "en") {
+            <span class="error textareaMsg">Please accept the privacy policy</span>
+            } @else if (!policy.valid && policy.touched && !policy.disabled && portData.lang == "ger" || 
+            !privacyPolicy && portData.lang == "ger") {
+            <span class="error textareaMsg">Bitte aktzeptieren sie die Datenschutzrichtlinien</span>
             }
+
             @if (portData.lang == "en") {
             <button>Send message :)</button>
             } @else {
