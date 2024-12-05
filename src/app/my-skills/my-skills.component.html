@@ -58,19 +58,27 @@
 
     </div>
 
-    <div class="skills">
-        <h1>Skills
-            <hr>
-        </h1>
+    <h1>Skills
+        <hr>
         @if (portData.lang == "en") {
-        <p>My journey has involved working on a vaiety of projects, employing a range of frontend technologies and
+        <p>I have gained experience in building projects with various front end technologies and concepts.</p>
+        } @else {
+        <p>Ich habe Erfahrung im Bauen von Projekten mit folgenden Frontend-Technologien und Konzepten gesammelt.</p>
+        }
+    </h1>
+
+    <div class="skills">
+
+
+        @if (portData.lang == "en") {
+        <p class="myJourney">My journey has involved working on a vaiety of projects, employing a range of frontend technologies and
             concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and
             stay ahead in the ever-evolvong landscape of web developement.</p>
         <h2>Looking for <strong>another skill</strong>?</h2>
         <p>Feel free to contact me. I look forward to expanding my horizon.</p>
         <a class="dFlexCenter" href="#contact">Get in touch</a>
         } @else {
-        <p>Meine Reise in der IT beinhaltete die Arbeit an einer Vielzahl von Projekten, bei denen ich eine Reihe von
+        <p class="myJourney">Meine Reise in der IT beinhaltete die Arbeit an einer Vielzahl von Projekten, bei denen ich eine Reihe von
             Frontend-Technologien und Konzepten einsetzte. Ich bin offen für neue Technologien und Methoden, um meine
             Fähigkeiten kontinuierlich zu verbessern und mich im ständig entwickelnden Bereich der Webentwicklung auf
             dem neuesten Stand zu halten.</p>
