@@ -14,10 +14,12 @@ img {
     cursor: pointer;
 }
 
-div {
+nav {
     display: flex;
     align-items: center;
     gap: 29px;
+    position: absolute;
+    right: 100px;
 
     >a {
         cursor: pointer;
@@ -41,4 +43,142 @@ div {
 .inactiveLang {
     filter: grayscale(1);
     transition: all 125ms ease-in;
+}
+
+.burgerIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 11;
+    width: 30px;
+    right: 25px;
+    top: 43px;
+    display: none;
+}
+
+#burgerMenu {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: none;
+    transform: translateX(100%);
+    transition: all 200ms ease-in-out;
+    background: rgba(0, 15, 15, 0.65);
+}
+
+.logo {
+    position: absolute;
+    top: 37px;
+    left: 100px;
+    padding-top: 0!important;
+    width: auto!important;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    a {
+        width: 100%;
+        height: 40px;
+        display: block;
+
+        text-align: center;
+        padding-top: 15px;
+        font-size: 24px;
+        border: none;
+        text-decoration: none;
+    }
+
+    >div {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 32px;
+
+        >a {
+            width: 110px;
+        }
+    }
+}
+
+input[type="checkbox"]:checked~#burgerMenu {
+    transform: translateY(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+input[type=checkbox]:checked~.burgerIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.burgerIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 11px;
+}
+
+input[type=checkbox]:checked~.burgerIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -13px;
+}
+
+@media screen and (max-width:914px) {
+    nav {
+        display: none;
+    }
+
+    .burgerIconToggle {
+        display: block
+    }
+
+    .logo {
+        left: 25px;
+    }
 }
