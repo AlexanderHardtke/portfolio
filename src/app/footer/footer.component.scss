@@ -71,3 +71,35 @@ hr {
         border: solid 1px #70e61c;
     }
 }
+
+@media screen and (max-width:914px) {
+    hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    section {
+        >div {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 380px;
+        }
+    }
+
+    .legal {
+        position: relative;
+        justify-self: center;
+        top: 320px;
+    }
+
+    .social {
+        height: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .logo {
+        width: 300px;
+    }
+}

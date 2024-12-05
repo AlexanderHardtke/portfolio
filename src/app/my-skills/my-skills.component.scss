@@ -210,9 +210,16 @@ p {
 @media screen and (max-width:914px) {
     section {
         width: 100%;
+        padding-top: 120px;
     }
 
     .hero {
         display: none;
+    }
+
+    h1 {
+        font-size: 45px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }

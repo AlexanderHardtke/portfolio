@@ -238,3 +238,9 @@ button {
 input:-internal-autofill-selected {
     background-color: #141c2e;
 }
+
+@media screen and (max-width:914px) {
+    section {
+        width: 100%;
+    }
+}

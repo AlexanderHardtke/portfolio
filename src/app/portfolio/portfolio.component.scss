@@ -143,3 +143,9 @@ nav {
         border: solid 2px #70e61c;
     }
 }
+
+@media screen and (max-width:914px) {
+    section {
+        width: 100%;
+    }
+}
