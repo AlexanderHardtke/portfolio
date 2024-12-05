@@ -15,6 +15,9 @@ export class HeaderComponent {
 
   constructor(private renderer: Renderer2) { }
 
+  /**
+   * deactivates the scrollbar for the website if the burger menu is open
+   */
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
     if (this.isMenuOpen) {
@@ -24,6 +27,11 @@ export class HeaderComponent {
     }
   }
 
+  /**
+   * sets the language of the website
+   * 
+   * @param lang The Language selected
+   */
   setLang(lang: string) {
     if (lang == "ger" || lang == "en") {
       this.portData.lang = lang;
