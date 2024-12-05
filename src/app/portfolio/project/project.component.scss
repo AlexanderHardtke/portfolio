@@ -23,7 +23,7 @@ section {
         display: flex;
         flex-direction: column;
         height: 100%;
-        
+
         div:nth-child(2) {
             background-color: white;
             max-height: 75%;
@@ -128,4 +128,14 @@ a {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+
+@media screen and (max-width:914px) {
+    section {
+        width: calc(100% - 50px);
+    }
+
+    .projects {
+        place-content: center;
+    }
 }

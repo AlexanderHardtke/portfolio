@@ -148,4 +148,20 @@ nav {
     section {
         width: 100%;
     }
+
+    h1 {
+        font-size: 45px;
+        
+        hr {
+            width: 20px;
+            position: relative;
+            right: 0px;
+            margin-right: 4px;
+        }
+    }
+
+    p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
