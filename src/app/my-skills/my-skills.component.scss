@@ -26,7 +26,7 @@ aside {
     z-index: 3;
 }
 
-.blue-shadow {
+.blueShadow {
     position: absolute;
     right: -620px;
     top: 600px;
@@ -35,7 +35,7 @@ aside {
     transition: right 600ms ease-in-out;
 }
 
-.blue-shadow.active {
+.blueShadow.active {
     right: -420px;
 }
 
@@ -373,6 +373,15 @@ p {
         >img:hover {
             filter: invert(44%) brightness(210%);
         }
+    }
+
+    .blueShadow{
+        top: 850px;
+        opacity: 0.65;
+    }
+
+    .blueShadow.active {
+        right: -550px;
     }
 }
 
