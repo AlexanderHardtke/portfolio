@@ -42,8 +42,6 @@ aside {
 .icons {
     position: relative;
     display: flex;
-    align-content: flex-start;
-    align-items: flex-start;
     flex-wrap: wrap;
     z-index: 3;
     gap: 80px;
@@ -118,7 +116,7 @@ h1 {
     }
 }
 
-.cont-learn {
+.contLearn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,8 +160,12 @@ h1 {
     }
 }
 
-.cont-learn:hover {
-    >div{
+.contLearnResponsive {
+    display: none;
+}
+
+.contLearn:hover {
+    >div {
         display: block;
     }
 
@@ -217,10 +219,57 @@ p {
     font-size: 16px;
 }
 
+@media screen and (max-width:1140px) {
+    .contLearn {
+        left: 161px;
+    }
+}
+
+@media screen and (max-width:975px) {
+    .skills {
+        max-width: 350px;
+    }
+
+    h1 {
+        width: 350px;
+    }
+
+}
+
 @media screen and (max-width:914px) {
     section {
         width: 100%;
         padding-top: 120px;
+        flex-direction: column;
+
+        >div {
+            order: 2;
+            max-width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 32px;
+            min-height: 242px;
+        }
+    }
+
+    .skills {
+        align-self: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        strong {
+            font-size: 24px;
+        }
+
+        p {
+            text-align: center;
+        }
     }
 
     .hero {
@@ -228,16 +277,107 @@ p {
     }
 
     h1 {
+        order: 1;
         font-size: 45px;
         padding-left: 24px;
         padding-right: 24px;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        gap: 32px;
+        padding-bottom: 32px;
 
         >p {
             display: block;
+            padding-right: 32px;
+            font-weight: 400;
+        }
+
+        hr {
+            position: absolute;
+            margin-right: 0;
+            margin-left: 275px;
+            top: 152px;
         }
     }
 
     .myJourney {
         display: none;
+    }
+
+    .icons {
+        justify-content: center;
+        max-height: none;
+    }
+
+    .contLearn {
+        display: none;
+    }
+
+    .contLearnResponsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 88px;
+        height: 101px;
+
+        >div {
+            position: absolute;
+            width: 188px;
+            height: 112px;
+            background-color: white;
+            border-radius: 20px;
+            top: -121px;
+            left: 6px;
+            z-index: 4;
+            display: none;
+
+            >img {
+                width: 32px;
+                position: inherit;
+                left: 30px;
+            }
+
+            >span {
+                padding: 4px;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+
+        >img {
+            filter: invert(12%) brightness(72%) contrast(200%) hue-rotate(82deg);
+        }
+
+        >p {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+    .contLearnResponsive:hover {
+        >div {
+            display: block;
+        }
+
+        >img {
+            transition-duration: 200ms;
+        }
+
+        >img:hover {
+            filter: invert(44%) brightness(210%);
+        }
+    }
+}
+
+@media screen and (max-width:510px) {
+    .icons {
+        gap: 39px;
     }
 }
