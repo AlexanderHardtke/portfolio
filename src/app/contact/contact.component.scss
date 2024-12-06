@@ -285,6 +285,10 @@ input:-internal-autofill-selected {
 
     form {
         width: 100%;
+
+        >input:first-child {
+            margin-top: 66px;
+        }
     }
 
     button {
@@ -353,5 +357,11 @@ input:-internal-autofill-selected {
             height: 50px;
             width: 180px;
         }
+    }
+}
+
+@media screen and (max-width:345px) {
+    h2 {
+        font-size: 21px;
     }
 }
