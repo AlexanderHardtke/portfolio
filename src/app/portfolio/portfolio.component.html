@@ -16,13 +16,13 @@
 
 
     <div class="slider" #feedback>
-        <img #greenShadow class="green-shadow" src="../../assets/img/background/shadow3.png">
+        <img #greenShadow class="greenShadow" src="../../assets/img/background/shadow3.png">
         <div>
             @for(userFeedback of userFeedbacks; track userFeedback.signatur; let index = $index) {
             <div class="feedback" [ngClass]="{'blurAway': this.feedbackIndex !== index, 'blurIn': this.feedbackIndex == index}">
-                <img class="quote-img" src="../../assets/img/icons/“.png">
+                <img class="quoteImg" src="../../assets/img/icons/“.png">
 
-                <div class="purple-box">
+                <div class="purpleBox">
                     @if (portData.lang == "en") {
                     <p>{{userFeedback.feedbackEng}}</p>
                     } @else {
@@ -36,7 +36,7 @@
 
                 </div>
 
-                <div class="evaluator-img">
+                <div class="evaluatorImg">
                     <img src="../../assets/img/{{userFeedback.imgCollab}}">
                     <hr>
                 </div>

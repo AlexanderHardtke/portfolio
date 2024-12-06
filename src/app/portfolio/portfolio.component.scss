@@ -3,10 +3,9 @@ section {
     min-height: 100vh;
     width: calc(100% - 200px);
     min-height: calc(100vh - 109px);
-    overflow-x: hidden;
 }
 
-.green-shadow {
+.greenShadow {
     position: absolute;
     left: -850px;
     top: -720px;
@@ -15,7 +14,7 @@ section {
     z-index: 2;
 }
 
-.green-shadow.active {
+.greenShadow.active {
     left: -680px;
 }
 
@@ -39,9 +38,9 @@ h1 {
 .slider {
     position: relative;
 
-    >div{
-       height: 439px;
-       width: 100%;
+    >div {
+        height: 439px;
+        width: 100%;
     }
 }
 
@@ -63,14 +62,14 @@ h1 {
 .blurAway {
     filter: blur(10px);
     opacity: 0;
-    transition: all 200ms ;
+    transition: all 200ms;
 }
 
 .blurIn {
     transition: all 250ms ease-in-out;
 }
 
-.purple-box {
+.purpleBox {
     display: flex;
     flex-direction: column;
     border: solid 4px #9747FF;
@@ -92,17 +91,16 @@ h1 {
 
     >p {
         margin-left: 16px;
-        text-align: end;
     }
 }
 
-.quote-img {
+.quoteImg {
     position: absolute;
     left: 32px;
     margin-top: 124px;
 }
 
-.evaluator-img {
+.evaluatorImg {
     display: flex;
     align-items: center;
 
@@ -126,6 +124,8 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    z-index: 4;
+    position: relative;
 
     >h3 {
         font-size: 20px;
@@ -147,11 +147,15 @@ nav {
 @media screen and (max-width:914px) {
     section {
         width: 100%;
+        >p {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
     }
 
     h1 {
         font-size: 45px;
-        
+
         hr {
             width: 20px;
             position: relative;
@@ -160,8 +164,110 @@ nav {
         }
     }
 
-    p {
-        padding-left: 25px;
-        padding-right: 25px;
+    .feedback {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .quoteImg {
+        display: none;
+    }
+
+    .evaluatorImg {
+        position: relative;
+        bottom: 710px;
+        align-self: center;
+
+        >img {
+            z-index: 3;
+            background-color: #141c2e;
+            width: 220px;
+            height: 220px;
+        }
+
+        >hr {
+            position: absolute;
+            width: calc(50vw - 11px);
+            margin-right: 0;
+            left: 136px
+        }
+    }
+
+    .purpleBox {
+        padding: 16px;
+        width: calc(100% - 88px);
+        margin-left: 24px;
+        height: 232px;
+
+        >p {
+            height: 100%;
+        }
+    }
+
+    nav {
+        margin-top: 216px;
+    }
+
+    .signature {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        >hr {
+            width: 55px;
+            margin-bottom: 8px;
+        }
+
+        >p {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:758px) {
+    .evaluatorImg {
+        bottom: 652px;
+
+        >img {
+            width: 180px;
+            height: 180px;
+        }
+
+        >hr {
+            width: calc(50vw - 11px);
+            left: 90px;
+        }
+    }
+
+    .feedback {
+        margin-top: 160px;
+    }
+
+    nav {
+        margin-top: 174px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .evaluatorImg {
+        bottom: 616px;
+
+        >img {
+            width: 144px;
+            height: 144px;
+        }
+
+        >hr {
+            width: calc(50vw - 11px);
+            left: 72px;
+        }
+    }
+
+    .feedback {
+        margin-top: 124px;
+    }
+
+    nav {
+        margin-top: 140px;
     }
 }
