@@ -138,7 +138,7 @@ p {
     }
 
     p {
-       padding-top: 0; 
+        padding-top: 0;
     }
 }
 
@@ -209,14 +209,14 @@ button {
     }
 }
 
-.purple-shadow {
+.purpleShadow {
     position: absolute;
     right: -550px;
     top: -33px;
     transition: right 600ms ease-in-out;
 }
 
-.purple-shadow.active {
+.purpleShadow.active {
     right: -280px;
 }
 
@@ -240,7 +240,118 @@ input:-internal-autofill-selected {
 }
 
 @media screen and (max-width:914px) {
+    h1 {
+        font-size: 45px;
+
+        >hr {
+            width: calc(50% - 114px);
+        }
+    }
+
+    h2 {
+        font-size: 23px;
+
+        >hr {
+            width: 24px;
+            right: 24px;
+            margin-right: -20px;
+        }
+    }
+
+    .purpleShadow {
+        right: -700px;
+        top: 180px;
+    }
+
+    .purpleShadow.active {
+        right: -500px;
+    }
+
     section {
+        width: calc(100% - 48px);
+        padding-left: 24px;
+        padding-right: 24px;
+
+        >div {
+            flex-direction: column;
+            align-items: center;
+
+            >div {
+                align-self: flex-start;
+                width: 100%;
+            }
+        }
+    }
+
+    form {
         width: 100%;
+    }
+
+    button {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width:758px) {
+    .purpleShadow {
+        right: -800px;
+    }
+
+    .purpleShadow.active {
+        right: -600px;
+    }
+
+    button {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .purpleShadow {
+        right: -850px;
+        top: 280px;
+    }
+
+    .purpleShadow.active {
+        right: -650px;
+    }
+
+    button {
+        height: 49px;
+        width: 195px;
+        font-size: 16px;
+
+        &:hover {
+            height: 54px;
+            width: 200px;
+        }
+    }
+
+    .greyFilling {
+
+        &:hover {
+            height: 54px;
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    button {
+        height: 45px;
+        width: 175px;
+
+        &:hover {
+            height: 50px;
+            width: 180px;
+        }
+    }
+
+    .greyFilling {
+
+        &:hover {
+            height: 50px;
+            width: 180px;
+        }
     }
 }
