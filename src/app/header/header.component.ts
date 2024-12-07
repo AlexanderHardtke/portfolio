@@ -46,9 +46,11 @@ export class HeaderComponent {
   goToMainContent(href: string) {
     if (this.portData.page == 'index') {
       window.location.hash = href;
+      setTimeout(() => window.location.hash = '#', 200);
     } else {
       this.portData.page = 'index';
       setTimeout(() => window.location.hash = href, 200);
+      setTimeout(() => window.location.hash = '#', 200);
     }
   }
 }
