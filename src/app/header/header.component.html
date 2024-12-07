@@ -1,18 +1,18 @@
 <section class="sec-pad" id="header">
 
-    <a (click)="goToMainContent()" class="logo">
+    <a (click)="goToMainContent('#index')" class="logo">
         <img src="../../assets/img/icons/AlexanderLogo.png">
     </a>
 
     <nav>
         @if (portData.lang == "en") {
-        <a href="#aboutMe">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a (click)="goToMainContent('#aboutMe')">About me</a>
+        <a (click)="goToMainContent('#skills')">Skills</a>
+        <a (click)="goToMainContent('#portfolio')">Portfolio</a>
         } @else {
-        <a href="#aboutMe">Über mich</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
+        <a (click)="goToMainContent('#aboutMe')">Über mich</a>
+        <a (click)="goToMainContent('#skills')">Skills</a>
+        <a (click)="goToMainContent('#portfolio')">Portfolio</a>
         }
 
         <div>
