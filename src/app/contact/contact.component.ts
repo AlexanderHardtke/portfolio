@@ -101,4 +101,8 @@ export class ContactComponent {
       }
     }
   }
+
+  goToPrivacyPolicy() {
+    this.portData.page = "privacy"
+  }
 }

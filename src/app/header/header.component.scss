@@ -21,6 +21,13 @@ nav {
     position: absolute;
     right: 100px;
 
+    >div {
+        width: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     >a {
         cursor: pointer;
         font-size: 23px;
@@ -38,11 +45,19 @@ nav {
         transition: all 125ms ease-in;
         filter: grayscale(0);
     }
+
+    img:hover{
+        border: 2px solid #70e61c;
+    }
 }
 
 .inactiveLang {
     filter: grayscale(1);
     transition: all 125ms ease-in;
+}
+
+.inactiveLang:hover {
+    filter: grayscale(0);
 }
 
 .burgerIconToggle {

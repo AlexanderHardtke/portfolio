@@ -1,0 +1,37 @@
+<section class="sec-pad">
+    @if (portData.lang == "en") {
+    <h1><hr>Legal Notice</h1>
+
+    <div>
+        <p>Alexander Hardtke<br />
+            Heilbronner Str.107<br />
+            89522 Heidenheim an der Brenz</p>
+
+        <h2>Contact</h2>
+        <p>Phone: 01759434431<br />
+            E-Mail: <a [href]="'mailto:' + portData.mail">{{ portData.mail }}</a>
+
+        <p>Source: <a href="https://www.e-recht24.de">eRecht24</a></p>
+    </div>
+
+    <button (click)="goToMainContent()">Back to Main-Page</button>
+    }
+    @else {
+    <h1><hr>Impressum</h1>
+
+    <div>
+        <p>Alexander Hardtke<br />
+            Heilbronner Str.107<br />
+            89522 Heidenheim an der Brenz</p>
+
+        <h2>Kontakt</h2>
+        <p>Telefon: 01759434431<br />
+            E-Mail: <a [href]="'mailto:' + portData.mail">{{ portData.mail }}</a>
+
+        <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+    </div>
+
+    <button (click)="goToMainContent()">Zurück zur Startseite</button>
+    }
+
+</section>

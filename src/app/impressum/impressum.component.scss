@@ -1,0 +1,119 @@
+section {
+    background-color: #141c2e;
+    min-height: calc(100vh - 403px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #70e61c;
+    ;
+}
+
+button {
+    margin-top: 32px;
+    margin-bottom: 130px;
+    background-color: #70E61C;
+    color: white;
+    height: 58px;
+    width: 253px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+    border: none;
+    font-size: 23px;
+
+    &:hover {
+        transition: all 250ms ease-in;
+        width: 275px;
+        height: 64px;
+        background-color: #9747ff;
+    }
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+
+    hr {
+        border: 2px solid #9747FF;
+        width: 68px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    word-break: break-word;
+}
+
+@media screen and (max-width:914px) {
+    section {
+        padding-left: 24px;
+        padding-right: 24px;
+        align-items: center;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    h1 {
+        font-size: 45px;
+
+        hr {
+            width: calc(50vw - 176px);
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .wideHr {
+        width: calc(50vw - 280px) !important;
+    }
+}
+
+@media screen and (max-width:600px) {
+    hr {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    section {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    button {
+        height: 45px;
+        width: 175px;
+        font-size: 16px;
+
+        &:hover {
+            height: 50px;
+            width: 180px;
+        }
+    }
+}

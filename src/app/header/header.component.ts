@@ -36,6 +36,12 @@ export class HeaderComponent {
     if (lang == "ger" || lang == "en") {
       this.portData.lang = lang;
     }
+  }
 
+  /**
+   * displays the main content on the website
+   */
+  goToMainContent() {
+    this.portData.page = "index"
   }
 }

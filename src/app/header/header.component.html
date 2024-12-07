@@ -1,6 +1,6 @@
 <section class="sec-pad" id="header">
 
-    <a href="#" class="logo">
+    <a (click)="goToMainContent()" class="logo">
         <img src="../../assets/img/icons/AlexanderLogo.png">
     </a>
 
@@ -15,10 +15,13 @@
         <a href="#portfolio">Portfolio</a>
         }
 
-        <a (click)="setLang('en')" [ngClass]="{'inactiveLang' : portData.lang == 'ger'}"><img
-                src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
-        <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : portData.lang == 'en'}"><img
-                src="../../assets/img/icons/Flag_of_Germany.svg"></a>
+        <div>
+            <a (click)="setLang('en')" [ngClass]="{'inactiveLang' : portData.lang == 'ger'}"><img
+                    src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
+            <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : portData.lang == 'en'}"><img
+                    src="../../assets/img/icons/Flag_of_Germany.svg"></a>
+        </div>
+        
     </nav>
 
     <input type="checkbox" class="openBurgerMenu" id="openBurgerMenu" [checked]="isMenuOpen" (change)="toggleMenu()">
@@ -35,8 +38,8 @@
             <a class="logo" (click)="toggleMenu()" href="#">
                 <img src="../../assets/img/icons/AlexanderLogo.png">
             </a>
-                
-            
+
+
 
             @if (portData.lang == "en") {
             <a (click)="toggleMenu()" href="#aboutMe">About me</a>

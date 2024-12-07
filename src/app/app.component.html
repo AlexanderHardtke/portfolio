@@ -1,10 +1,17 @@
 <router-outlet>
     <app-header></app-header>
+    <!-- @if (portData.page == "impressum") {
+    <app-impressum></app-impressum>
+    } @else if (portData.page == "privacy") {
+    <app-privacy></app-privacy>
+    } @else {
     <app-atf></app-atf>
     <app-about-me></app-about-me>
     <app-my-skills></app-my-skills>
     <app-portfolio></app-portfolio>
     <app-contact></app-contact>
+    } -->
+    <app-privacy></app-privacy>
     <app-footer></app-footer>
 
 </router-outlet>
