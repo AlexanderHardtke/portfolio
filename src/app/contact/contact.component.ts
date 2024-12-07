@@ -42,6 +42,11 @@ export class ContactComponent {
     },
   };
 
+  /**
+   * submits the form and sends the mail to the assigned website in senMail.php
+   * 
+   * @param ngForm the contact form that is submitted
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -61,6 +66,9 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Opens a window after the form is submitted as a user feedback
+   */
   sendMailNotification() {
     this.showConfirmation = true;
     setTimeout(() => {
@@ -68,17 +76,31 @@ export class ContactComponent {
     }, 3000);
   }
 
+  /**
+   * adds an eventlistener for the scrollbar
+   */
   ngOnInit() {
     this.scrollListener = this.handleScroll.bind(this);
     window.addEventListener('scroll', this.scrollListener);
   }
 
+  /**
+   * removes the eventlistener for the scrollbar
+   */
   ngOnDestroy() {
     if (this.scrollListener) {
       window.removeEventListener('scroll', this.scrollListener);
     }
   }
 
+  /**
+   * checks if the element is in view of the screen and sets an offset
+   * 
+   * @param element the element that is in view
+   * @param topOffset the offset of the top side of the element
+   * @param bottomOffset the offset of the bottom side of the element
+   * @returns true if the viewport aligns with the element
+   */
   private isInViewport(element: HTMLElement, topOffset: number = 0, bottomOffset: number = 0): boolean {
     const rect = element.getBoundingClientRect();
     return (
@@ -89,6 +111,9 @@ export class ContactComponent {
     );
   }
 
+  /**
+   * handles the scrollbar and checks if the shadow is in view for the user to add the active class
+   */
   private handleScroll() {
     if (this.contactSection && this.purpleShadow) {
       const skillsElement = this.contactSection.nativeElement;
@@ -102,6 +127,9 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * switches to the privacy policy page
+   */
   goToPrivacyPolicy() {
     this.portData.page = "privacy"
   }

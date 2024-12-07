@@ -19,7 +19,9 @@ export class FooterComponent {
   }
 
   /**
-   * displays the main content on the website
+   * displays the main content for the website and moves to the section selected by the user
+   * 
+   * @param href the section selected by the user
    */
   goToMainContent(href: string) {
     if (this.portData.page == 'index') {

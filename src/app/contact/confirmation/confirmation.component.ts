@@ -12,6 +12,9 @@ export class ConfirmationDialogComponent {
 
   constructor(private renderer: Renderer2) {}
 
+  /**
+   * sets the overflow of the body on hidden to remove the scrollbar when the user gets the confirmation
+   */
   ngOnChanges() {
     const body = document.body;
     if (this.visible) {

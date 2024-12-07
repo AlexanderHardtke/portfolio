@@ -18,17 +18,31 @@ export class MySkillsComponent implements OnInit, OnDestroy {
 
   constructor(private renderer: Renderer2) {}
 
+  /**
+   * adds an eventlistener for the scrollbar
+   */
   ngOnInit() {
     this.scrollListener = this.handleScroll.bind(this);
     window.addEventListener('scroll', this.scrollListener);
   }
 
+  /**
+   * removes the eventlistener for the scrollbar
+   */
   ngOnDestroy() {
     if (this.scrollListener) {
       window.removeEventListener('scroll', this.scrollListener);
     }
   }
 
+  /**
+   * checks if the element is in view of the screen and sets an offset
+   * 
+   * @param element the element that is in view
+   * @param topOffset the offset of the top side of the element
+   * @param bottomOffset the offset of the bottom side of the element
+   * @returns true if the viewport aligns with the element
+   */
   private isInViewport(element: HTMLElement, topOffset: number = 0, bottomOffset: number = 0): boolean {
     const rect = element.getBoundingClientRect();
     return (
@@ -39,6 +53,9 @@ export class MySkillsComponent implements OnInit, OnDestroy {
     );
   }
 
+  /**
+   * handles the scrollbar and checks if the shadow is in view for the user to add the active class
+   */
   private handleScroll() {
     if (this.skillsSection && this.blueShadow) {
       const skillsElement = this.skillsSection.nativeElement;

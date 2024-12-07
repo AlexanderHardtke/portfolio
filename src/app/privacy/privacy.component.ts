@@ -12,8 +12,8 @@ export class PrivacyComponent {
   portData = inject(PortfoliodataService);
 
   /**
-     * displays the main content on the website
-     */
+    * displays the main content on the website
+    */
   goToMainContent() {
     this.portData.page = "index"
   }
