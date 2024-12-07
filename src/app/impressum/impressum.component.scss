@@ -61,8 +61,14 @@ p {
     word-break: break-word;
 }
 
+.index {
+    position: absolute;
+    top: 0;
+}
+
 @media screen and (max-width:914px) {
     section {
+        min-height: calc(100vh - 493px);
         padding-left: 24px;
         padding-right: 24px;
         align-items: center;
