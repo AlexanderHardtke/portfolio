@@ -144,9 +144,68 @@ nav {
     }
 }
 
+@media screen and (max-width:1134px) {
+    .feedback {
+        flex-direction: column;
+        margin-top: 280px;
+    }
+
+    .evaluatorImg {
+        position: relative;
+        bottom: 820px;
+        align-self: center;
+
+        >img {
+            z-index: 3;
+            background-color: #141c2e;
+        }
+
+        >hr {
+            position: absolute;
+            width: calc(50vw - 11px);
+            margin-right: 0;
+            left: 141px
+        }
+    }
+
+    .purpleBox {
+        width: calc(100% - 200px);
+    }
+
+    nav {
+        margin-top: 306px;
+    }
+
+    .signature {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        >hr {
+            width: 55px;
+            margin-bottom: 8px;
+        }
+
+        >p {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .feedback {
+        margin-top: 240px;
+    }
+}
+
 @media screen and (max-width:914px) {
+    .feedback {
+        margin-top: 200px;
+    }
+
     section {
         width: 100%;
+
         >p {
             padding-left: 25px;
             padding-right: 25px;
@@ -164,31 +223,19 @@ nav {
         }
     }
 
-    .feedback {
-        flex-direction: column;
-        margin-top: 200px;
-    }
-
     .quoteImg {
         display: none;
     }
 
     .evaluatorImg {
-        position: relative;
         bottom: 710px;
-        align-self: center;
 
         >img {
-            z-index: 3;
-            background-color: #141c2e;
             width: 220px;
             height: 220px;
         }
 
         >hr {
-            position: absolute;
-            width: calc(50vw - 11px);
-            margin-right: 0;
             left: 136px
         }
     }

@@ -17,20 +17,20 @@ export class PortfolioComponent {
     {
       signatur: "Cookie",
       imgCollab: "laptop3.png",
-      feedbackEng: "Loves eating cookies",
-      feedbackGer: "Liebt Kekse :)",
+      feedbackEng: "English1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      feedbackGer: "Deutsch1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
     },
     {
       signatur: "Sharkie",
       imgCollab: "project_sharkie.png",
-      feedbackEng: "Loves eating fishes",
-      feedbackGer: "Liebt Fische :)",
+      feedbackEng: "English2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      feedbackGer: "Deutsch2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
     },
     {
       signatur: "Pikagirl",
       imgCollab: "PA150252.JPG",
-      feedbackEng: "Loves Ash",
-      feedbackGer: "Liebt Ash :)",
+      feedbackEng: "English3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      feedbackGer: "Deutsch3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
     },
   ]
   feedbackIndex: number = 0;

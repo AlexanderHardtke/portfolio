@@ -1,3 +1,2 @@
-Background-Color: #141c2e
-Button-Color: #70e61c
-Button-Color2: #9747ff
+Email kommt nicht an
+Scroll bei Firefox
