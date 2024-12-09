@@ -6,14 +6,14 @@
 
     <hr>
     @if (portData.lang == "en") {
-    <a (click)="goToLegal()" class="legal">Legal Notice<div class="green-line"></div></a>
+    <a [routerLink]="['/impressum']" class="legal">Legal Notice<div class="green-line"></div></a>
     } @else {
-    <a (click)="goToLegal()" class="legal">Impressum<div class="green-line"></div></a>
+    <a [routerLink]="['/impressum']" routerLinkActive="router-link-active"  class="legal">Impressum<div class="green-line"></div></a>
     }
 
     <div>
         <div>
-            <a (click)="goToMainContent('#index')"><img class="logo" src="../../assets/img/icons/AlexanderLogo.png"></a>
+            <a [routerLink]="['/']"><img class="logo" src="../../assets/img/icons/AlexanderLogo.png"></a>
         </div>
 
 

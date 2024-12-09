@@ -4,11 +4,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ConfirmationDialogComponent } from './confirmation/confirmation.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, ConfirmationDialogComponent],
+  imports: [FormsModule, CommonModule, ConfirmationDialogComponent, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

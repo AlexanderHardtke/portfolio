@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { PortfoliodataService } from '../portfoliodata.service';
+import { PortfoliodataService } from '../../portfoliodata.service';
 
 @Component({
   selector: 'app-atf',

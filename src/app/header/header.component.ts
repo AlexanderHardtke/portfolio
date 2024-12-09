@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, Renderer2 } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
