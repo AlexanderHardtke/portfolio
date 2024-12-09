@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { ProjectComponent } from './project/project.component'
-import { PortfoliodataService } from '../portfoliodata.service';
+import { PortfoliodataService } from '../../portfoliodata.service';
 import { CommonModule } from '@angular/common';
 
 
