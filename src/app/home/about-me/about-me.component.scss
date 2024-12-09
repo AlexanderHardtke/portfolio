@@ -31,7 +31,8 @@ section {
     display: flex;
     flex-direction: column;
     width: calc(100% - 200px);
-    min-height: 600px;
+    min-height: 700px;
+    max-height: 1000px;
 }
 
 .aboutMe {
@@ -115,5 +116,12 @@ section {
             padding-left: 24px;
             padding-right: 24px;
         }
+    }
+}
+
+@media screen and (min-height:1200px) {
+    section {
+        height: calc(45vh + 10vw);
+        max-height: 1250px;
     }
 }

@@ -28,7 +28,7 @@ export class PortfolioComponent {
     },
     {
       signatur: "Pikagirl",
-      imgCollab: "PA150252.JPG",
+      imgCollab: "PA150252.jpg",
       feedbackEng: "English3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
       feedbackGer: "Deutsch3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
     },
