@@ -5,6 +5,8 @@ section {
     background-repeat: no-repeat;
     background-position: 80vw -6vh;
     background-size: 720px;
+    position: relative;
+    overflow: hidden;
 
     >img {
         height: 750px;
@@ -300,23 +302,37 @@ h2 {
     }
 }
 
-@media screen and (min-width: 914px), 
-       screen and (max-height: 895px) {
-        section {
-            background-position: 75vw 50px;
-    
-            >img {
-                left: -15%;
-            }
+@media screen and (min-width: 914px),
+screen and (max-height: 895px) {
+    section {
+        background-position: 75vw 50px;
+
+        >img {
+            left: -15%;
         }
-    
-        .btnDiv {
-            top: 15vh;
-        }
-       }
+    }
+
+    .btnDiv {
+        top: 15vh;
+    }
+}
 
 @media screen and (max-height:600px) {
     .btnDiv {
         top: 8vh;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    section {
+        background-position: 130% 6vh;
+    }
+
+    .btnDiv {
+        top: 30vh;
+    }
+
+    .scroll {
+        right: -60px;
     }
 }
