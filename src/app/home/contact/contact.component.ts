@@ -27,9 +27,10 @@ export class ContactComponent {
   };
 
   private scrollListener: (() => void) | null = null;
+  mailTest = false;
   privacyPolicy = true;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) { }
 
   post = {
     endPoint: 'https://alexander.hardtke.de/sendMail.php',
@@ -55,9 +56,7 @@ export class ContactComponent {
             this.sendMailNotification();
             ngForm.resetForm();
           },
-          error: (error) => {
-            console.error(error);
-          },
+          error: (error) => { console.error(error); },
           complete: () => console.info('send post complete'),
         });
     }
@@ -115,7 +114,7 @@ export class ContactComponent {
     if (this.contactSection && this.purpleShadow) {
       const skillsElement = this.contactSection.nativeElement;
       const imageElement = this.purpleShadow.nativeElement;
-  
+
       if (this.isInViewport(skillsElement, 1000, 750)) {
         this.renderer.addClass(imageElement, 'active');
       } else {
