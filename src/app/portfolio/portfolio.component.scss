@@ -147,7 +147,7 @@ nav {
 @media screen and (max-width:1134px) {
     .feedback {
         flex-direction: column;
-        margin-top: 280px;
+        margin-top: 340px;
     }
 
     .evaluatorImg {
@@ -169,11 +169,13 @@ nav {
     }
 
     .purpleBox {
-        width: calc(100% - 200px);
+        width: calc(100% - 100px);
+        padding: 24px 48px 24px 48px;
+        height: 232px;
     }
 
     nav {
-        margin-top: 306px;
+        margin-top: 362px;
     }
 
     .signature {
@@ -189,12 +191,6 @@ nav {
         >p {
             margin-left: 0;
         }
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .feedback {
-        margin-top: 240px;
     }
 }
 
@@ -244,7 +240,6 @@ nav {
         padding: 16px;
         width: calc(100% - 88px);
         margin-left: 24px;
-        height: 232px;
 
         >p {
             height: 100%;
@@ -273,7 +268,7 @@ nav {
 
 @media screen and (max-width:758px) {
     .evaluatorImg {
-        bottom: 652px;
+        bottom: 670px;
 
         >img {
             width: 180px;
@@ -296,8 +291,12 @@ nav {
 }
 
 @media screen and (max-width:500px) {
+    .purpleBox {
+        height: 322px;
+    }
+
     .evaluatorImg {
-        bottom: 616px;
+        bottom: 716px;
 
         >img {
             width: 144px;
@@ -315,6 +314,6 @@ nav {
     }
 
     nav {
-        margin-top: 140px;
+        margin-top: 240px;
     }
 }

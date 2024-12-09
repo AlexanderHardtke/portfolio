@@ -76,6 +76,29 @@ hr {
     }
 }
 
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    >img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    .logo {
+        width: 230px;
+    }
+
+    .copyright {
+        >img {
+            width: 300px;
+        }
+    }
+}
+
 @media screen and (max-width:914px) {
     hr {
         width: 100%;
@@ -104,9 +127,7 @@ hr {
         height: 40px;
         padding-bottom: 40px;
     }
-}
 
-@media screen and (max-width:375px) {
     .logo {
         width: 300px;
     }
