@@ -1,7 +1,7 @@
 .profile {
     position: absolute;
     max-width: 61%;
-    max-height: 85%;
+    max-height: calc(100% - 120px);
     right: 0;
     z-index: 2;
     bottom: 120px;
@@ -11,7 +11,7 @@
 .profileOverlap {
     position: absolute;
     max-width: 61%;
-    max-height: 85%;
+    max-height: calc(100% - 120px);
     right: 0;
     z-index: 8;
     bottom: 120px;
@@ -21,7 +21,7 @@
 .hero {
     display: none;
     position: absolute;
-    top: calc(-2% + 70vw);
+    top: calc(-2% + 78vw);
     width: 100%;
 }
 
@@ -39,7 +39,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    z-index: 3;
+    z-index: 4;
 
     >div {
         display: flex;
@@ -84,6 +84,7 @@ section {
     }
 
     .profile {
+        margin-top: 40px;
         order: 1;
         position: static;
         max-height: 100%;
@@ -92,6 +93,7 @@ section {
     }
 
     .profileOverlap {
+        margin-top: 40px;
         order: 2;
         position: absolute;
         bottom: auto;
