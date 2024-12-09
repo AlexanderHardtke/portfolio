@@ -27,7 +27,6 @@ export class ContactComponent {
   };
 
   private scrollListener: (() => void) | null = null;
-  mailTest = true;
   privacyPolicy = true;
 
   constructor(private renderer: Renderer2) {}
@@ -49,7 +48,7 @@ export class ContactComponent {
    * @param ngForm the contact form that is submitted
    */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -61,9 +60,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.sendMailNotification();
-      ngForm.resetForm();
     }
   }
 
