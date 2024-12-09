@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, Renderer2 } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,7 @@ export class HeaderComponent {
   portData = inject(PortfoliodataService);
   isMenuOpen = false;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private router: Router) { }
 
   /**
    * deactivates the scrollbar for the website if the burger menu is open
@@ -36,22 +36,6 @@ export class HeaderComponent {
   setLang(lang: string) {
     if (lang == "ger" || lang == "en") {
       this.portData.lang = lang;
-    }
-  }
-
-  /**
-   * displays the main content for the website and moves to the section selected by the user
-   * 
-   * @param href the section selected by the user
-   */
-  goToMainContent(href: string) {
-    if (this.portData.page == 'index') {
-      window.location.hash = href;
-      setTimeout(() => window.location.hash = '#', 200);
-    } else {
-      this.portData.page = 'index';
-      setTimeout(() => window.location.hash = href, 200);
-      setTimeout(() => window.location.hash = '#', 200);
     }
   }
 }

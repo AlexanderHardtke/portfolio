@@ -127,11 +127,4 @@ export class ContactComponent {
       }
     }
   }
-
-  /**
-   * switches to the privacy policy page
-   */
-  goToPrivacyPolicy() {
-    this.portData.page = "privacy"
-  }
 }

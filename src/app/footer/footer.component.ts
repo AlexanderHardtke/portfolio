@@ -11,4 +11,11 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   portData = inject(PortfoliodataService)
+
+  /**
+   * Scrolls to the top of the page
+   */
+  goToTop() {
+    window.scrollTo(0, 0);
+  }
 }

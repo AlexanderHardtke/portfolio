@@ -1,18 +1,18 @@
 <section class="secPad" id="header">
 
-    <a [routerLink]="['/']" class="logo">
+    <a routerLink="/" class="logo">
         <img src="../../assets/img/icons/AlexanderLogo.png">
     </a>
 
     <nav>
         @if (portData.lang == "en") {
-        <a (click)="goToMainContent('#aboutMe')">About me</a>
-        <a (click)="goToMainContent('#skills')">Skills</a>
-        <a (click)="goToMainContent('#portfolio')">Portfolio</a>
+        <a routerLink="/" fragment="aboutMe">About me</a>
+        <a routerLink="/" fragment="skills">Skills</a>
+        <a routerLink="/" fragment="portfolio">Portfolio</a>
         } @else {
-        <a (click)="goToMainContent('#aboutMe')">Über mich</a>
-        <a (click)="goToMainContent('#skills')">Skills</a>
-        <a (click)="goToMainContent('#portfolio')">Portfolio</a>
+        <a routerLink="/" fragment="aboutMe">Über mich</a>
+        <a routerLink="/" fragment="skills">Skills</a>
+        <a routerLink="/" fragment="portfolio">Portfolio</a>
         }
 
         <div>
