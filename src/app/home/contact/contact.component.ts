@@ -33,7 +33,7 @@ export class ContactComponent {
   constructor(private renderer: Renderer2) { }
 
   post = {
-    endPoint: 'https://alexander.hardtke.com/sendMail.php',
+    endPoint: 'https://alexander-hardtke.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
