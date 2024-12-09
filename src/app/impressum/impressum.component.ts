@@ -1,29 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })
 export class ImpressumComponent {
   portData = inject(PortfoliodataService);
 
-  /**
-   * displays the main content for the website and moves to the section selected by the user
-   * 
-   * @param href the section selected by the user
-   */
-  goToMainContent(href: string) {
-    if (this.portData.page == 'index') {
-      window.location.hash = href;
-      setTimeout(() => window.location.hash = '#', 200);
-    } else {
-      this.portData.page = 'index';
-      setTimeout(() => window.location.hash = href, 200);
-      setTimeout(() => window.location.hash = '#', 200);
-    }
-  }
 }
