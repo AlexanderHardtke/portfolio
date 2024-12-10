@@ -1,20 +1,29 @@
 section {
     background-color: #141c2e;
+    position: relative;
     z-index: 3;
-    
+
     .green-line {
         position: absolute;
         left: -56px;
         height: 0px;
         transition: all 125ms ease-in-out;
-       
     }
 
-    >div {
+    >div:nth-child(2) {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    >div:nth-child(3) {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 290px;
+        max-width: 1920px;
+        margin: 0 auto;
     }
 }
 
@@ -23,16 +32,16 @@ section {
 }
 
 .navArrow {
-        position: absolute;
-        right: 100px;
-        margin-top: -92px;
-        z-index: 3;
-    
-        &:hover {
-            filter: invert(38%) sepia(78%) saturate(499%) hue-rotate(75deg) brightness(91%) contrast(100%);
-            cursor: pointer;
-        }
+    position: absolute;
+    right: 0;
+    top: -92px;
+    z-index: 3;
+
+    &:hover {
+        filter: invert(38%) sepia(78%) saturate(499%) hue-rotate(75deg) brightness(91%) contrast(100%);
+        cursor: pointer;
     }
+}
 
 hr {
     width: calc(100% + 200px);
@@ -62,11 +71,9 @@ hr {
 }
 
 .legal {
-    display: block;
-    position: relative;
+    position: absolute;
     bottom: -171px;
     height: 0px;
-    font-size: 16px;
     cursor: pointer;
 
     &:hover .green-line {
@@ -97,6 +104,10 @@ hr {
             width: 300px;
         }
     }
+
+    .legal {
+        bottom: -161px;
+    }
 }
 
 @media screen and (max-width:914px) {
@@ -110,17 +121,22 @@ hr {
     }
 
     section {
-        >div {
+        >div:nth-child(3) {
             flex-direction: column;
             justify-content: space-evenly;
             height: 380px;
         }
+
+        .green-line {
+            position: relative;
+            margin-left: calc(50vw - 54px);
+        }
     }
 
     .legal {
-        position: relative;
-        justify-self: center;
-        top: 320px;
+        top: 110px;
+        width: 100%;
+        text-align: center;
     }
 
     .social {
@@ -130,5 +146,12 @@ hr {
 
     .logo {
         width: 300px;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    section {
+        margin-left: calc(960px - 50vw);
+        margin-right: calc(960px - 50vw);
     }
 }

@@ -1,15 +1,19 @@
 <section class="secPad">
 
-    <a (click)="goToTop()" class="navArrow">
-        <img src="../../assets/img/icons/arrowUp.png">
-    </a>
-
     <hr>
-    @if (portData.lang == "en") {
-    <a [routerLink]="['/impressum']" class="legal">Legal Notice<div class="green-line"></div></a>
-    } @else {
-    <a [routerLink]="['/impressum']" routerLinkActive="router-link-active"  class="legal">Impressum<div class="green-line"></div></a>
-    }
+
+    <div>
+        <a (click)="goToTop()" class="navArrow">
+            <img src="../../assets/img/icons/arrowUp.png">
+        </a>
+
+        @if (portData.lang == "en") {
+        <a [routerLink]="['/impressum']" class="legal">Legal Notice<div class="green-line"></div></a>
+        } @else {
+        <a [routerLink]="['/impressum']" routerLinkActive="router-link-active" class="legal">Impressum<div
+                class="green-line"></div></a>
+        }
+    </div>
 
     <div>
         <div>
@@ -23,7 +27,8 @@
         </div>
 
         <div class="social">
-            <a href="https://github.com/AlexanderHardtke" target="_blank"><img src="../../assets/img/icons/github.png"></a>
+            <a href="https://github.com/AlexanderHardtke" target="_blank"><img
+                    src="../../assets/img/icons/github.png"></a>
             <a href="#contact"><img src="../../assets/img/icons/mail.png"></a>
             <a href="https://www.linkedin.com/in/alexander-hardtke-89b0172b9/" target="_blank"><img
                     src="../../assets/img/icons/linkedIn.png"></a>
