@@ -8,14 +8,14 @@ section {
 .purpleShadow {
     height: 750px;
     left: -18%;
-    top: 10vh;
+    top: calc(50vh - 750px);
     position: absolute;
 }
 
 .blueShadow {
     height: 750px;
     right: -20%;
-    top: 10vh;
+    top: calc(50vh - 750px);
     position: absolute;
 }
 
@@ -137,128 +137,6 @@ h2 {
     }
 }
 
-@media screen and (max-width:1260px) {
-    h1 {
-        font-size: 70px;
-    }
-
-    h2 {
-        font-size: 50px;
-    }
-
-    p {
-        font-size: 56px;
-        margin-right: -44px;
-    }
-}
-
-@media screen and (max-width:1070px) {
-    h1 {
-        font-size: 57px;
-    }
-
-    h2 {
-        font-size: 45px;
-    }
-
-    p {
-        font-size: 46px;
-        margin-right: -66px;
-    }
-}
-
-@media screen and (max-width:914px) {
-    p {
-        margin-left: -70px;
-    }
-
-    .scroll {
-        display: none;
-    }
-
-    .socialMedia {
-        margin-left: 0px;
-    }
-}
-
-@media screen and (max-width:680px) {
-    h1 {
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 29px;
-    }
-
-    p {
-        font-size: 32px;
-    }
-}
-
-@media screen and (max-width:550px) {
-    h1 {
-        margin-right: 25px;
-        margin-block-end: 0;
-    }
-
-    p {
-        margin-left: 0;
-        margin-right: -44px;
-    }
-}
-
-@media screen and (max-width:450px) {
-    p {
-        margin-left: -40px;
-    }
-}
-
-@media screen and (max-width:420px) {
-    h1 {
-        margin-right: 0;
-        text-align: center;
-    }
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        rotate: 0deg;
-        position: absolute;
-        top: -40px;
-    }
-
-    .intro {
-        align-items: center;
-    }
-
-    .socialMedia {
-        >div {
-            width: 150px;
-        }
-    }
-}
-
-@media screen and (max-height:895px) {
-    .btnDiv {
-        top: 15vh;
-    }
-}
-
-@media screen and (min-width: 914px),
-screen and (max-height: 895px) {
-    .btnDiv {
-        top: 15vh;
-    }
-}
-
-@media screen and (max-height:600px) {
-    .btnDiv {
-        top: 8vh;
-    }
-}
-
 @media screen and (min-width: 1921px) {
     section {
         overflow: visible;
@@ -272,3 +150,145 @@ screen and (max-height: 895px) {
         right: -60px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media screen and (max-width:1260px) {
+//     h1 {
+//         font-size: 70px;
+//     }
+
+//     h2 {
+//         font-size: 50px;
+//     }
+
+//     p {
+//         font-size: 56px;
+//         margin-right: -44px;
+//     }
+// }
+
+// @media screen and (max-width:1070px) {
+//     h1 {
+//         font-size: 57px;
+//     }
+
+//     h2 {
+//         font-size: 45px;
+//     }
+
+//     p {
+//         font-size: 46px;
+//         margin-right: -66px;
+//     }
+// }
+
+// @media screen and (max-width:914px) {
+//     p {
+//         margin-left: -70px;
+//     }
+
+//     .scroll {
+//         display: none;
+//     }
+
+//     .socialMedia {
+//         margin-left: 0px;
+//     }
+// }
+
+// @media screen and (max-width:680px) {
+//     h1 {
+//         font-size: 45px;
+//     }
+
+//     h2 {
+//         font-size: 29px;
+//     }
+
+//     p {
+//         font-size: 32px;
+//     }
+// }
+
+// @media screen and (max-width:550px) {
+//     h1 {
+//         margin-right: 25px;
+//         margin-block-end: 0;
+//     }
+
+//     p {
+//         margin-left: 0;
+//         margin-right: -44px;
+//     }
+// }
+
+// @media screen and (max-width:450px) {
+//     p {
+//         margin-left: -40px;
+//     }
+// }
+
+// @media screen and (max-width:420px) {
+//     h1 {
+//         margin-right: 0;
+//         text-align: center;
+//     }
+
+//     h2 {
+//         text-align: center;
+//     }
+
+//     p {
+//         rotate: 0deg;
+//         position: absolute;
+//         top: -40px;
+//     }
+
+//     .intro {
+//         align-items: center;
+//     }
+
+//     .socialMedia {
+//         >div {
+//             width: 150px;
+//         }
+//     }
+// }
+
+// @media screen and (max-height:895px) {
+//     .btnDiv {
+//         top: 15vh;
+//     }
+// }
+
+// @media screen and (min-width: 914px),
+// screen and (max-height: 895px) {
+//     .btnDiv {
+//         top: 15vh;
+//     }
+// }
+
+// @media screen and (max-height:600px) {
+//     .btnDiv {
+//         top: 8vh;
+//     }
+// }
