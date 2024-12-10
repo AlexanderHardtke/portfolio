@@ -84,7 +84,7 @@ p {
         font-size: 45px;
 
         hr {
-            width: calc(50vw - 176px);
+            width: calc(50vw - 180px);
         }
     }
 
@@ -120,6 +120,17 @@ p {
         &:hover {
             height: 50px;
             width: 180px;
+        }
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    h1 {
+        hr{
+            width: 70px;
+            position: relative;
+            left: -100px;
+            margin-right: -70px;
         }
     }
 }
