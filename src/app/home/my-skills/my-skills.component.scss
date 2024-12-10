@@ -17,15 +17,6 @@ aside {
     margin-top: -129px;
 }
 
-.hero {
-    position: absolute;
-    top: -250px;
-    width: 100%;
-    height: calc(40vh - 6vw);
-    margin-left: -100px;
-    z-index: 3;
-}
-
 .blueShadow {
     position: absolute;
     right: -620px;
@@ -272,10 +263,6 @@ p {
         }
     }
 
-    .hero {
-        display: none;
-    }
-
     h1 {
         order: 1;
         font-size: 45px;
@@ -391,10 +378,8 @@ p {
     }
 }
 
-
-@media screen and (min-height: 1700px),
-screen and (min-width: 1921px) {
-    .hero {
-        height: 420px;
+@media screen and (min-width: 1921px) {
+    section {
+        overflow: visible;
     }
 }

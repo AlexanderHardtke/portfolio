@@ -14,3 +14,7 @@ RewriteRule ^ - [L]
 RewriteRule ^ /index.html
 
 https://github.com/stackblitz/core/issues/1918
+
+skills responsive 4k
+about me responsive 4k
+atf responsive 4k
