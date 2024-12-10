@@ -2,19 +2,6 @@ Contenteinschränkung verbessern
 Mehr Animationen
 id index position absolute top
 
-	Add a rewrite rule to the .htaccess file as shown (ngmilk.rocks/2015/03/09/angularjs-html5-mode-or-pretty-urls-on-apache-using-htaccess):
-content_copy
-RewriteEngine On
-# If an existing asset or directory is requested go to it as it is
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-RewriteRule ^ - [L]
 
-# If the requested resource doesn't exist, use index.html
-RewriteRule ^ /index.html
-
-https://github.com/stackblitz/core/issues/1918
-
-skills responsive 4k
 about me responsive 4k
 atf responsive 4k

@@ -2,38 +2,36 @@
 
     <div class="index" id="index"></div>
 
-    <img class="purpleShadow" src="../../assets/img/background/shadow2.png">
-    <img class="blueShadow" src="../../assets/img/background/shadow9.png">
-
-
-    <div>
-
-        @if (portData.lang == "en") {
-        <div class="btnDiv">
-            <div class="dFlexCenter">
-                <p>I am</p>
-                <div class="intro">
-                    <h1>Alexander Hardtke</h1>
-                    <h2>FRONTEND DEVELOPER</h2>
-                </div>
-            </div>
-            <a class="dFlexCenter" href="#contact">Let's talk!</a>
-        </div>
-
-        } @else {
-        <div class="btnDiv">
-            <div class="dFlexCenter">
-                <p>Ich bin</p>
-                <div class="intro">
-                    <h1>Alexander Hardtke</h1>
-                    <h2>FRONTEND ENTWICKLER</h2>
-                </div>
-            </div>
-            <a class="dFlexCenter" href="#contact">Reden wir!</a>
-        </div>
-        }
-
+    <div class="shadows">
+        <img class="purpleShadow" src="../../assets/img/background/shadow2.png">
+        <img class="blueShadow" src="../../assets/img/background/shadow9.png">
     </div>
+
+    @if (portData.lang == "en") {
+    <div class="btnDiv">
+        <div class="dFlexCenter">
+            <p>I am</p>
+            <div class="intro">
+                <h1>Alexander Hardtke</h1>
+                <h2>FRONTEND DEVELOPER</h2>
+            </div>
+        </div>
+        <a class="dFlexCenter" href="#contact">Let's talk!</a>
+    </div>
+
+    } @else {
+    <div class="btnDiv">
+        <div class="dFlexCenter">
+            <p>Ich bin</p>
+            <div class="intro">
+                <h1>Alexander Hardtke</h1>
+                <h2>FRONTEND ENTWICKLER</h2>
+            </div>
+        </div>
+        <a class="dFlexCenter" href="#contact">Reden wir!</a>
+    </div>
+    }
+
 
     <div class="socialMedia">
         <hr>
