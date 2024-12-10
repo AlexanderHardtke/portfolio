@@ -1,56 +1,19 @@
 <section class="secPad" id="header">
+    <div class="wrapperHeader">
 
-    <a routerLink="/" fragment="index" class="logo">
-        <img src="../../assets/img/icons/AlexanderLogo.png">
-    </a>
+        <a routerLink="/" fragment="index" class="logo">
+            <img src="../../assets/img/icons/AlexanderLogo.png">
+        </a>
 
-    <nav>
-        @if (portData.lang == "en") {
-        <a routerLink="/" fragment="aboutMe">About me</a>
-        <a routerLink="/" fragment="skills">Skills</a>
-        <a routerLink="/" fragment="portfolio">Portfolio</a>
-        } @else {
-        <a routerLink="/" fragment="aboutMe">Über mich</a>
-        <a routerLink="/" fragment="skills">Skills</a>
-        <a routerLink="/" fragment="portfolio">Portfolio</a>
-        }
-
-        <div>
-            <a (click)="setLang('en')" [ngClass]="{'inactiveLang' : portData.lang == 'ger'}"><img
-                    src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
-            <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : portData.lang == 'en'}"><img
-                    src="../../assets/img/icons/Flag_of_Germany.svg"></a>
-        </div>
-        
-    </nav>
-
-    <input type="checkbox" class="openBurgerMenu" id="openBurgerMenu" [checked]="isMenuOpen" (change)="toggleMenu()">
-
-    <label for="openBurgerMenu" class="burgerIconToggle">
-        <div class="spinner diagonal part-1"></div>
-        <div class="spinner horizontal"></div>
-        <div class="spinner diagonal part-2"></div>
-    </label>
-
-    <div id="burgerMenu">
-        <div class="wrapper">
-
-            <a class="logo" (click)="toggleMenu()" href="#">
-                <img src="../../assets/img/icons/AlexanderLogo.png">
-            </a>
-
-
-
+        <nav>
             @if (portData.lang == "en") {
-            <a (click)="toggleMenu()" href="#aboutMe">About me</a>
-            <a (click)="toggleMenu()" href="#skills">Skills</a>
-            <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
-            <a (click)="toggleMenu()" href="#contact">Contact</a>
+            <a routerLink="/" fragment="aboutMe">About me</a>
+            <a routerLink="/" fragment="skills">Skills</a>
+            <a routerLink="/" fragment="portfolio">Portfolio</a>
             } @else {
-            <a (click)="toggleMenu()" href="#aboutMe">Über mich</a>
-            <a (click)="toggleMenu()" href="#skills">Skills</a>
-            <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
-            <a (click)="toggleMenu()" href="#contact">Kontact</a>
+            <a routerLink="/" fragment="aboutMe">Über mich</a>
+            <a routerLink="/" fragment="skills">Skills</a>
+            <a routerLink="/" fragment="portfolio">Portfolio</a>
             }
 
             <div>
@@ -60,6 +23,46 @@
                         src="../../assets/img/icons/Flag_of_Germany.svg"></a>
             </div>
 
+        </nav>
+
+        <input type="checkbox" class="openBurgerMenu" id="openBurgerMenu" [checked]="isMenuOpen"
+            (change)="toggleMenu()">
+
+        <label for="openBurgerMenu" class="burgerIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+
+        <div id="burgerMenu">
+            <div class="wrapper">
+
+                <a class="logo" (click)="toggleMenu()" href="#">
+                    <img src="../../assets/img/icons/AlexanderLogo.png">
+                </a>
+
+
+
+                @if (portData.lang == "en") {
+                <a (click)="toggleMenu()" href="#aboutMe">About me</a>
+                <a (click)="toggleMenu()" href="#skills">Skills</a>
+                <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+                <a (click)="toggleMenu()" href="#contact">Contact</a>
+                } @else {
+                <a (click)="toggleMenu()" href="#aboutMe">Über mich</a>
+                <a (click)="toggleMenu()" href="#skills">Skills</a>
+                <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+                <a (click)="toggleMenu()" href="#contact">Kontact</a>
+                }
+
+                <div>
+                    <a (click)="setLang('en')" [ngClass]="{'inactiveLang' : portData.lang == 'ger'}"><img
+                            src="../../assets/img/icons/Flag_of_the_United_Kingdom_(1-2).svg"></a>
+                    <a (click)="setLang('ger')" [ngClass]="{'inactiveLang' : portData.lang == 'en'}"><img
+                            src="../../assets/img/icons/Flag_of_Germany.svg"></a>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>

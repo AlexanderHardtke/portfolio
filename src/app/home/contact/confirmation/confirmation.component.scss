@@ -19,6 +19,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 50%;
   height: 30vh;
+  max-height: 550px;
   gap: 16px;
   text-align: center;
   display: flex;
@@ -54,4 +55,22 @@ h2 {
 
 .noscroll {
   overflow: hidden !important;
+}
+
+@media screen and (max-width:500px) {
+  #dialog {
+    width: 75%;
+  }
+
+  h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  #dialog {
+    width: 850px;
+    height: 300px;
+  }
 }

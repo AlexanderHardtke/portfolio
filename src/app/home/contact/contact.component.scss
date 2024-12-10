@@ -217,7 +217,7 @@ button {
 }
 
 .purpleShadow.active {
-    right: -280px;
+    right: -400px;
 }
 
 .redBorder {
@@ -363,5 +363,11 @@ input:-internal-autofill-selected {
 @media screen and (max-width:345px) {
     h2 {
         font-size: 21px;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    section {
+        overflow: visible;
     }
 }

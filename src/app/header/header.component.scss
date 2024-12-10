@@ -1,12 +1,18 @@
 section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #141c2e;
     position: sticky;
     top: 0;
     z-index: 10;
+    
+}
+
+.wrapperHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
     height: 109px;
-    background-color: #141c2e;
+    margin: 0 auto;
 }
 
 img {
@@ -18,8 +24,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 29px;
-    position: absolute;
-    right: 100px;
 
     >div {
         width: 130px;
@@ -83,14 +87,6 @@ nav {
     transform: translateX(100%);
     transition: all 200ms ease-in-out;
     background: rgba(0, 15, 15, 0.65);
-}
-
-.logo {
-    position: absolute;
-    top: 37px;
-    left: 100px;
-    padding-top: 0!important;
-    width: auto!important;
 }
 
 .wrapper {
@@ -194,16 +190,13 @@ input[type=checkbox]:checked~.burgerIconToggle>.diagonal.part-2 {
     }
 
     .logo {
-        left: 25px;
+        padding-left: 25px;
     }
 }
 
 @media screen and (min-width: 1921px) {
-    .logo {
-        left: 0;
-    }
-
-    nav {
-        right: 0;
+    section {
+        margin-left: calc(960px - 50vw);
+        margin-right: calc(960px - 50vw);
     }
 }
