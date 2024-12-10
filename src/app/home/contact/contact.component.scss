@@ -80,8 +80,6 @@ h1 {
 
 h2 {
     font-size: 32px;
-    display: flex;
-    align-items: center;
 
     >hr {
         border: 2px solid #1CDAE6;
@@ -89,6 +87,7 @@ h2 {
         position: relative;
         right: 100px;
         margin-right: -72px;
+        top: 26px;
     }
 }
 
@@ -252,9 +251,9 @@ input:-internal-autofill-selected {
         font-size: 23px;
 
         >hr {
-            width: 24px;
+            width: 16px;
             right: 24px;
-            margin-right: -20px;
+            top: 19px;
         }
     }
 
@@ -357,12 +356,6 @@ input:-internal-autofill-selected {
             height: 50px;
             width: 180px;
         }
-    }
-}
-
-@media screen and (max-width:345px) {
-    h2 {
-        font-size: 21px;
     }
 }
 
