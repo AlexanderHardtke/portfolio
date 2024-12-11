@@ -40,6 +40,12 @@ aside {
     max-width: 750px;
 }
 
+var {
+    >a {
+        font-style: normal;
+    }
+}
+
 .skills {
     position: relative;
     display: flex;
