@@ -363,4 +363,16 @@ input:-internal-autofill-selected {
     section {
         overflow: visible;
     }
+
+    form {
+
+        >input[type=text],
+        [type=email] {
+            width: 100%
+        }
+
+        >textarea {
+            width: 100%
+        }
+    }
 }
