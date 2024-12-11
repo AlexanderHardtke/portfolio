@@ -4,4 +4,3 @@ id index position absolute top
 
 
 about me responsive 4k
-atf responsive 4k

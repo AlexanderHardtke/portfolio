@@ -1,34 +1,47 @@
+<div class="heroBig">
+    <img src="../../assets/img/background/heroBackground.png">
+</div>
 <section class="secPad">
-    <div class="aboutMe">
+
+    <div class="profileContainer">
+        <img class="profile" src="../../assets/img/Alex1.png">
+        <img class="profile profileOverlap" src="../../assets/img/Alex2.png">
         <img class="hero" src="../../assets/img/background/heroBackground.png">
-        @if (portData.lang == "en") {
+    </div>
+
+
+    <div class="aboutMe">
         <aside id="aboutMe"></aside>
+        @if (portData.lang == "en") {
         <h1>About me</h1>
         <div>
-            <p>Hi there, i am a frontend developer near Heidenheim in the process to moving to the beautiful Augsburg.
+            <p>Hi there, i am a frontend developer near Heidenheim in the process to moving to the beautiful
+                Augsburg.
                 Motivated by a fascination and the possibilities in the IT area i am looking for a new job.</p>
         </div>
 
         <div>
             <var><img src="../../assets/img/icons/locationBlue.png"></var>
-            <p>Flexible in terms of working environments, I can work effectively both on-site near Augsburg or remotely.
+            <p>Flexible in terms of working environments, I can work effectively both on-site near Augsburg or
+                remotely.
             </p>
         </div>
         <div>
             <var><img src="../../assets/img/icons/lightbulbBlue.png"></var>
-            <p>I am open for new technologies and always looking for new personal challenges to improve my knowledge and
+            <p>I am open for new technologies and always looking for new personal challenges to improve my knowledge
+                and
                 skills.
             </p>
         </div>
         <div>
             <var><img src="../../assets/img/icons/puzzleBlue.png"></var>
-            <p>In my profession, programming isn't just about writing code; it's a creative form of problem-solving and
+            <p>In my profession, programming isn't just about writing code; it's a creative form of problem-solving
+                and
                 improving processes.
             </p>
 
         </div>
         } @else {
-        <aside id="aboutMe"></aside>
         <h1>Über mich</h1>
         <div>
             <p>Hallo, ich bin ein Frontend-Entwickler in Heidenheim der demnächst in das schöne Augsburg zieht.
@@ -48,13 +61,13 @@
         </div>
         <div>
             <var><img src="../../assets/img/icons/puzzleBlue.png"></var>
-            <p>In meiner Berufung als Programmierer geht es nicht nur darum Code zu schreiben sondern eine kreative Art
+            <p>In meiner Berufung als Programmierer geht es nicht nur darum Code zu schreiben sondern eine kreative
+                Art
                 Probleme zu lösen und Prozesse zu verbessern.</p>
 
         </div>
         }
 
     </div>
-    <img class="profile" src="../../assets/img/Alex1.png">
-    <img class="profileOverlap" src="../../assets/img/Alex2.png">
+
 </section>

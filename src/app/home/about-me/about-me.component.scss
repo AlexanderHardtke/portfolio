@@ -1,6 +1,6 @@
 .profile {
     position: absolute;
-    max-width: 61%;
+    max-width: 63%;
     max-height: calc(100% - 120px);
     right: 0;
     z-index: 2;
@@ -9,37 +9,36 @@
 }
 
 .profileOverlap {
-    position: absolute;
-    max-width: 61%;
-    max-height: calc(100% - 120px);
-    right: 0;
     z-index: 8;
-    bottom: 120px;
-    object-fit: contain;
 }
 
 .hero {
-    display: none;
     position: absolute;
-    top: calc(-2% + 78vw);
+    left: 0;
+    bottom: 0;
     width: 100%;
+    z-index: 3;
+    height: calc(50% - 120px);
+    max-height: 360px;
+}
+
+.heroBig {
+    display: none;
 }
 
 section {
     background-color: #141c2e;
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: calc(100% - 200px);
-    min-height: 700px;
+    min-height: 750px;
 }
 
 .aboutMe {
-    max-width: 55%;
+    width: 55%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     gap: 35px;
-    z-index: 4;
 
     >div {
         display: flex;
@@ -70,57 +69,74 @@ section {
 @media screen and (max-width:1040px) {
     h1 {
         font-size: 77px;
-        z-index: 4;
     }
 }
 
 @media screen and (max-width:914px) {
-    .hero {
-        display: block;
-    }
-
     section {
         width: 100%;
+        min-height: 750px;
     }
 
-    .profile {
-        margin-top: 40px;
-        order: 1;
-        position: static;
-        max-height: 100%;
-        max-width: 100%;
-        margin-bottom: 100px;
-    }
+    .aboutMe {
+        width: calc(100% - 48px);
+        align-items: center;
+        place-self: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: -60px;
 
-    .profileOverlap {
-        margin-top: 40px;
-        order: 2;
-        position: absolute;
-        bottom: auto;
-        max-height: 100%;
-        max-width: 100%;
+        >div {
+            align-items: center;
+            z-index: 4;
+        }
     }
 
     h1 {
         font-size: 45px;
         padding-left: 24px;
         padding-right: 24px;
+        z-index: 3;
     }
 
-    .aboutMe {
-        order: 3;
-        max-width: none;
+    .profileContainer {
+        position: relative;
+        height: 100vh;
+        max-height: 100vw;
+        min-height: 500px;
+        width: 100%;
+    }
 
-        >div {
-            padding-left: 24px;
-            padding-right: 24px;
-        }
+    .profile {
+        max-width: 100%;
+        bottom: 120px;
+    }
+
+    .hero {
+        height: calc(50vh - 120px);
+        max-height: calc(28vw + 120px)
     }
 }
 
-@media screen and (min-height:1200px) {
-    section {
-        height: calc(45vh + 10vw);
-        max-height: 1250px;
+@media screen and (min-width:1921px) {
+    .hero {
+        display: none;
+    }
+
+    .heroBig {
+        display: block;
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+
+        >img {
+            position: absolute;
+            width: 100%;
+            height: 500px;
+            z-index: 3;
+            left: 0;
+            top: 420px;
+        }
     }
 }
