@@ -6,6 +6,8 @@
         </a>
 
         <nav>
+            @if (isRoot) {
+                
             @if (portData.lang == "en") {
             <a routerLink="/" fragment="aboutMe">About me</a>
             <a routerLink="/" fragment="skills">Skills</a>
@@ -14,6 +16,7 @@
             <a routerLink="/" fragment="aboutMe">Über mich</a>
             <a routerLink="/" fragment="skills">Skills</a>
             <a routerLink="/" fragment="portfolio">Portfolio</a>
+            }
             }
 
             <div>

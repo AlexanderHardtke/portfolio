@@ -1,6 +1,3 @@
 Contenteinschränkung verbessern
 Mehr Animationen
 id index position absolute top
-
-
-about me responsive 4k

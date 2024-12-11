@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 import { PortfoliodataService } from '../portfoliodata.service';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 
@@ -10,11 +10,24 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   portData = inject(PortfoliodataService);
-  isMenuOpen = false;
+  isMenuOpen: boolean = false;
+  isRoot: boolean = false;
 
   constructor(private renderer: Renderer2, private router: Router) { }
+
+
+  /**
+   * checks the URL for the main-content page with the variable isRoot
+   */
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isRoot = event.url != '/privacy' && event.url != '/impressum';
+      }
+    });
+  }
 
   /**
    * deactivates the scrollbar for the website if the burger menu is open
