@@ -111,13 +111,12 @@ export class ContactComponent {
   }
 
   /**
-   * handles the scrollbar and checks if the shadow is in view for the user to add the active class
+   * handles the scrollbar and checks if the shadow is in view for the user to add the active class if the screen is smaller than 1920px
    */
   private handleScroll() {
-    if (this.contactSection && this.purpleShadow) {
+    if (this.contactSection && this.purpleShadow && window.innerWidth <= 1921) {
       const skillsElement = this.contactSection.nativeElement;
       const imageElement = this.purpleShadow.nativeElement;
-
       if (this.isInViewport(skillsElement, 1000, 750)) {
         this.renderer.addClass(imageElement, 'active');
       } else {

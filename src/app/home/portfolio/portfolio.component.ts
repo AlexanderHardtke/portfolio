@@ -16,22 +16,22 @@ import Aos from 'aos';
 export class PortfolioComponent {
   userFeedbacks = [
     {
-      signatur: "Cookie",
-      imgCollab: "laptop3.png",
-      feedbackEng: "English1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
-      feedbackGer: "Deutsch1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      signatur: "Alexandra H.",
+      imgCollab: "feedback1.png",
+      feedbackEng: "Model text until real feedback exists. Alexander was a really pleasant fellow to work with and always helpful.",
+      feedbackGer: "Mustertext bis echtes Feedback vorhanden. Alexander war immer freundlich und allzeit hilfsbereit",
     },
     {
-      signatur: "Sharkie",
-      imgCollab: "project_sharkie.png",
-      feedbackEng: "English2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
-      feedbackGer: "Deutsch2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      signatur: "Edward S.",
+      imgCollab: "feedback2.png",
+      feedbackEng: "Model text until real feedback exists. Edward significantly contributed to the success of the project with his positive attitude and solutionoriented approach. His ability to tackle challenges methodically and motivate the team was crucial.",
+      feedbackGer: "Mustertext bis echtes Feedback vorhanden. Edward hat mit seiner positiven Einstellung und lösungsorientierten Herangehensweise wesentlich zum Erfolg des Projekts beigetragen. Seine Fähigkeit, Herausforderungen strukturiert anzugehen und das Team zu motivieren, war entscheidend.",
     },
     {
-      signatur: "Pikagirl",
-      imgCollab: "PA150252.jpg",
-      feedbackEng: "English3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
-      feedbackGer: "Deutsch3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
+      signatur: "Markus R.",
+      imgCollab: "feedback3.png",
+      feedbackEng: "Model text until real feedback exists. Markus really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      feedbackGer: "Mustertext bis echtes Feedback vorhanden. Markus hat das Team wirklich durch seine großartige Organisation und klare Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
     },
   ]
   feedbackIndex: number = 0;
@@ -71,8 +71,8 @@ export class PortfolioComponent {
    * adds an eventlistener for the scrollbar
    */
   ngOnInit() {
-    this.scrollListener = this.handleScroll.bind(this);
-    window.addEventListener('scroll', this.scrollListener);
+      this.scrollListener = this.handleScroll.bind(this);
+      window.addEventListener('scroll', this.scrollListener);
   }
 
   /**
@@ -103,10 +103,10 @@ export class PortfolioComponent {
   }
 
   /**
-   * handles the scrollbar and checks if the shadow is in view for the user to add the active class
+   * handles the scrollbar and checks if the shadow is in view for the user to add the active class if the screen is smaller than 1920px
    */
   private handleScroll() {
-    if (this.feedbackSection && this.greenShadow) {
+    if (this.feedbackSection && this.greenShadow && window.innerWidth <= 1921) {
       const skillsElement = this.feedbackSection.nativeElement;
       const imageElement = this.greenShadow.nativeElement;
       if (this.isInViewport(skillsElement, 70, 830)) {

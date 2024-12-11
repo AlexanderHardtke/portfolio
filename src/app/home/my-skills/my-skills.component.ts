@@ -57,13 +57,12 @@ export class MySkillsComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * handles the scrollbar and checks if the shadow is in view for the user to add the active class
+   * handles the scrollbar and checks if the shadow is in view for the user to add the active class if the screen is smaller than 1920px
    */
   private handleScroll() {
-    if (this.skillsSection && this.blueShadow) {
+    if (this.skillsSection && this.blueShadow && window.innerWidth <= 1921) {
       const skillsElement = this.skillsSection.nativeElement;
       const imageElement = this.blueShadow.nativeElement;
-  
       if (this.isInViewport(skillsElement, 1300, 250)) {
         this.renderer.addClass(imageElement, 'active');
       } else {
