@@ -202,10 +202,26 @@ h2 {
     }
 }
 
+@media screen and (max-width: 914px) {
+    .socialMedia {
+        margin-left: 0;
+
+        >div {
+            width: 174px;
+        }
+        
+        hr {
+            width: 64px;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) {
     .btnDiv {
         >div {
             flex-direction: column;
+            padding-left: 8px;
+            padding-right: 8px;
         }
     }
 
