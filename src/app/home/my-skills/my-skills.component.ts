@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject } from '@angular/core';
 import { PortfoliodataService } from '../../portfoliodata.service';
+import Aos from 'aos';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class MySkillsComponent implements OnInit, OnDestroy {
 
   private scrollListener: (() => void) | null = null;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) {
+    Aos.init();
+  }
 
   /**
    * adds an eventlistener for the scrollbar

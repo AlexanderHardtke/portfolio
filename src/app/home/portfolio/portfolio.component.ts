@@ -2,6 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild, inject 
 import { ProjectComponent } from './project/project.component'
 import { PortfoliodataService } from '../../portfoliodata.service';
 import { CommonModule } from '@angular/common';
+import Aos from 'aos';
 
 
 
@@ -41,7 +42,9 @@ export class PortfolioComponent {
 
   private scrollListener: (() => void) | null = null;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {
+    Aos.init();
+  }
 
   /**
    * sets the previous feedback as active

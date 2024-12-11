@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { PortfoliodataService } from '../../portfoliodata.service';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-about-me',
@@ -11,4 +12,8 @@ import { PortfoliodataService } from '../../portfoliodata.service';
 export class AboutMeComponent {
   portData = inject(PortfoliodataService);
 
+
+  constructor() {
+    Aos.init();
+  }
 }

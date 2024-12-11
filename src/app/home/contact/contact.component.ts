@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ConfirmationDialogComponent } from './confirmation/confirmation.component';
 import { RouterLink } from '@angular/router';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-contact',
@@ -30,7 +31,9 @@ export class ContactComponent {
   mailTest = false;
   privacyPolicy = true;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {
+    Aos.init();
+  }
 
   post = {
     endPoint: 'https://alexander-hardtke.com/sendMail.php',
