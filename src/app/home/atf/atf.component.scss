@@ -203,17 +203,28 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+    .btnDiv {
+        >div {
+            flex-direction: column;
+        }
+    }
+
     h1 {
         font-size: 45px;
+        text-align: center;
+        margin-block-end: 0;
     }
 
     h2 {
         font-size: 29px;
+        text-align: center;
     }
 
     p {
         font-size: 32px;
-        margin-right: -82px;
+        rotate: 0deg;
+        width: auto;
+        margin-right: 0;
     }
 
     .btnDiv {
@@ -233,7 +244,7 @@ h2 {
 
     .purpleShadow {
         left: -160px;
-        top: -100px;
+        top: -64px;
     }
 
     .blueShadow {
@@ -243,6 +254,23 @@ h2 {
 
     .scroll {
         display: none;
+    }
+
+    .intro {
+        height: auto;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .purpleShadow {
+        left: -190px;
+        top: -164px;
+    }
+
+    .blueShadow {
+        top: 100px;
+        right: -30vw;
     }
 }
 
