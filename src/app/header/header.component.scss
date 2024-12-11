@@ -109,13 +109,15 @@ nav {
     >a:nth-child(1) {
         position: absolute;
         top: 20px;
-        right: 50px;
+        left: 25px;
+        text-align: left;
+    
     }
 
     >div {
         display: flex;
         justify-content: center;
-        padding-bottom: 32px;
+        padding-bottom: 40px;
 
         >a {
             width: 110px;

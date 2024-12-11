@@ -1,0 +1,11 @@
+
+C:\Users\Alucard\Desktop\Programmieren\Projekte\Angular\portfolio>git pull 
+Already up to date.
+
+C:\Users\Alucard\Desktop\Programmieren\Projekte\Angular\portfolio>git add . 
+
+C:\Users\Alucard\Desktop\Programmieren\Projekte\Angular\portfolio>git commit -m "impressum -" 
+[main 32f43d9] impressum -
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+C:\Users\Alucard\Desktop\Programmieren\Projekte\Angular\portfolio>git push 

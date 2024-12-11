@@ -3,6 +3,7 @@ section {
     width: calc(100% - 200px);
     min-height: 780px;
     position: relative;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     overflow-x: clip;
@@ -374,12 +375,12 @@ p {
 @media screen and (max-width: 767px) {
     a {
         height: 49px;
-        width: 133px;
+        width: 150px;
         font-size: 16px;
         font-style: normal;
 
         &:hover {
-            width: 150px;
+            width: 160px;
             height: 60px;
         }
     }
