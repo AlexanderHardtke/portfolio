@@ -39,6 +39,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    position: relative;
+    z-index: 3;
 
     >div {
         display: flex;
@@ -79,8 +81,6 @@ section {
     }
 
     .aboutMe {
-        position: relative;
-        z-index: 3;
         width: calc(100% - 48px);
         align-items: center;
         place-self: center;
