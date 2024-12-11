@@ -5,6 +5,6 @@ import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'impressum', component: ImpressumComponent },
+  { path: 'legal', component: ImpressumComponent },
   { path: 'privacy', component: PrivacyComponent },
 ];
