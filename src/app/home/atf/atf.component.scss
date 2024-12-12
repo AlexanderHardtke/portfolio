@@ -68,6 +68,7 @@ section {
 
 var {
     height: 68px;
+
     >a {
         font-style: normal;
     }
@@ -130,8 +131,9 @@ h2 {
     }
 
     hr {
-        border: 2px solid #9747ff;
         width: 100px;
+        align-content: center;
+        border: 2px solid #9747ff;
     }
 }
 
@@ -315,5 +317,15 @@ h2 {
 
     .scroll {
         right: -60px;
+    }
+
+    .socialMedia {
+        margin-left: 0px;
+
+        hr {
+            position: absolute;
+            width: 50vw;
+            right: 220px;
+        }
     }
 }
