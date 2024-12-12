@@ -37,7 +37,6 @@ aside {
     flex-wrap: wrap;
     z-index: 3;
     gap: 80px;
-    max-height: 645px;
     max-width: 750px;
 }
 
@@ -73,12 +72,15 @@ h1 {
     right: 100px;
     width: 426px;
 
-    hr {
-        border: 2px solid #1CDAE6;
+    >div {
         width: 100%;
         margin-right: -100px;
         align-self: center;
         margin-left: 32px;
+
+        hr {
+            border: 2px solid #1CDAE6;
+        }
     }
 
     >p {
@@ -109,13 +111,6 @@ h1 {
 }
 
 .contLearn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 88px;
-    height: 101px;
-    margin-top: 80px;
     position: relative;
 
     >div {
@@ -152,10 +147,6 @@ h1 {
     }
 }
 
-.contLearnResponsive {
-    display: none;
-}
-
 .contLearn:hover {
     >div {
         display: block;
@@ -167,6 +158,7 @@ h1 {
 
     >img:hover {
         filter: invert(44%) brightness(210%);
+        transform: translateY(0);
     }
 }
 
@@ -211,12 +203,6 @@ p {
     font-size: 16px;
 }
 
-@media screen and (max-width:1140px) {
-    .contLearn {
-        left: 161px;
-    }
-}
-
 @media screen and (max-width:975px) {
     .skills {
         max-width: 350px;
@@ -239,8 +225,7 @@ p {
             max-width: 100%;
             padding-left: 24px;
             padding-right: 24px;
-            padding-bottom: 32px;
-            min-height: 242px;
+            min-height: 180px;
         }
     }
 
@@ -281,10 +266,10 @@ p {
             font-weight: 400;
         }
 
-        hr {
+        >div {
             position: absolute;
             margin-right: -280px;
-            top: 30px;
+            top: 32px;
         }
     }
 
@@ -298,67 +283,19 @@ p {
     }
 
     .contLearn {
-        display: none;
-    }
-
-    .contLearnResponsive {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 88px;
-        height: 101px;
-
         >div {
-            position: absolute;
             width: 128px;
             height: 122px;
-            background-color: white;
-            border-radius: 20px;
             top: -134px;
             left: 5px;
-            z-index: 4;
-            display: none;
-
-            >img {
-                width: 32px;
-                position: inherit;
-                left: 30px;
-            }
 
             >span {
-                padding: 4px;
-                color: black;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
                 font-size: 14px;
-                text-align: center;
             }
         }
 
         >img {
             filter: invert(12%) brightness(72%) contrast(200%) hue-rotate(82deg);
-        }
-
-        >p {
-            margin-top: 10px;
-            text-align: center;
-        }
-    }
-
-    .contLearnResponsive:hover {
-        >div {
-            display: block;
-        }
-
-        >img {
-            transition-duration: 200ms;
-        }
-
-        >img:hover {
-            filter: invert(44%) brightness(210%);
         }
     }
 
@@ -387,13 +324,36 @@ p {
 }
 
 @media screen and (max-width:510px) {
+    section {
+        >div {
+            min-height: 190px;
+        }
+    }
+
     .icons {
         gap: 39px;
+    }
+}
+
+@media screen and (max-width:365px) {
+    section {
+        >div {
+            min-height: 240px;
+        }
     }
 }
 
 @media screen and (min-width: 1921px) {
     section {
         overflow: visible;
+    }
+
+    h1 {
+        >div {
+            >hr {
+                position: absolute;
+                width: 100vw;
+            }
+        }
     }
 }
