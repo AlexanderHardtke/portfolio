@@ -375,4 +375,20 @@ input:-internal-autofill-selected {
             width: 100%
         }
     }
+
+    h1 {
+        >hr{
+            width: 50vw;
+            right: calc(636px - 50vw);
+            z-index: 3;
+        }
+    }
+
+    h2 {
+        >hr {
+            width: 50vw;
+            right: 50vw;
+            margin-left: -32px;
+        }
+    }
 }
