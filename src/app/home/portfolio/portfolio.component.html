@@ -19,7 +19,7 @@
         <img #greenShadow class="greenShadow" src="../../assets/img/background/shadow3.png">
         <div>
             @for(userFeedback of userFeedbacks; track userFeedback.signatur; let index = $index) {
-            <div class="feedback"  data-aos="flip-down" data-aos-easing="ease-out-cubic"
+            <div class="feedback"
                 [ngClass]="{'blurAway': this.feedbackIndex !== index, 'blurIn': this.feedbackIndex == index}">
                 <img class="quoteImg" src="../../assets/img/icons/“.png">
 

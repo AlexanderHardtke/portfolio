@@ -99,14 +99,20 @@ h1 {
     >p {
         margin-top: 10px;
         text-align: center;
+        height: 0px;
     }
 
-    >img {
+    >svg {
+        height: 60px;
         transition-duration: 200ms;
     }
 
-    >img:hover {
+    >svg:hover {
         transform: translateY(-12px);
+    }
+
+    >img {
+        height: 60px;
     }
 }
 
@@ -119,7 +125,7 @@ h1 {
         height: 112px;
         background-color: white;
         border-radius: 20px;
-        top: -121px;
+        top: -96px;
         left: 6px;
         z-index: 4;
         display: none;
