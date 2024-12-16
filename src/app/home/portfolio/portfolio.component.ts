@@ -16,16 +16,16 @@ import Aos from 'aos';
 export class PortfolioComponent {
   userFeedbacks = [
     {
+      signatur: "Saskia D.",
+      imgCollab: "Saskia_D.png",
+      feedbackEng: "Alex has proven to be an extremely cooperative and dedicated team member. He consistently contributed proactively to the team dynamic and was open to feedback and new ideas. Communication was always clear and effective, which played a key role in ensuring the smooth progress of the project. Es hat sehr viel spaß gemacht mit ihm zu arbeiten",
+      feedbackGer: "Alex hat sich als äußerst kooperativer und engagierter Teamkollege erwiesen. Er hat immer proaktiv zur Teamdynamik beigetragen und war offen für Feedback und neue Ideen. Die Kommunikation war stets klar und effektiv, was maßgeblich zum reibungslosen Ablauf des Projekts beigetragen hat. It was a great pleasure working with him.",
+    },
+    {
       signatur: "Alexander M.",
       imgCollab: "Alex_M.jpg",
       feedbackEng: "Alexander's core competency was the planning and management of production processes. He was a very important part of our leadership team.",
       feedbackGer: "Alexanders Kernkompetenz war die Planung und Steuerung von Produktionsprozessen. Er war ein sehr wichtiger Teil unseres Führungsteams.",
-    },
-    {
-      signatur: "Saskia D.",
-      imgCollab: "feedback2.png",
-      feedbackEng: "Model text until real feedback exists. Markus really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-      feedbackGer: "Mustertext bis echtes Feedback vorhanden. Markus hat das Team wirklich durch seine großartige Organisation und klare Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
     },
   ]
   feedbackIndex: number = 0;
