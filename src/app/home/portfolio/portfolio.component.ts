@@ -18,8 +18,8 @@ export class PortfolioComponent {
     {
       signatur: "Saskia D.",
       imgCollab: "Saskia_D.png",
-      feedbackEng: "Alex has proven to be an extremely cooperative and dedicated team member. He consistently contributed proactively to the team dynamic and was open to feedback and new ideas. Communication was always clear and effective, which played a key role in ensuring the smooth progress of the project. It was a great pleasure working with him.",
-      feedbackGer: "Alex hat sich als äußerst kooperativer und engagierter Teamkollege erwiesen. Er hat immer proaktiv zur Teamdynamik beigetragen und war offen für Feedback und neue Ideen. Die Kommunikation war stets klar und effektiv, was maßgeblich zum reibungslosen Ablauf des Projekts beigetragen hat. Es hat sehr viel Spaß gemacht, mit ihm zu arbeiten.",
+      feedbackEng: "Alex has proven to be a highly collaborative and dedicated teammate, supporting his team members in troubleshooting and achieving sprint goals. Communication was always clear because he also had an urge to internalize everything. It was a lot of fun working with him.",
+      feedbackGer: "Alex hat sich als äußerst kooperativer und engagierter Teamkollege erwiesen, indem er seine Teammitglieder beim Suchen von Fehlern und Erreichen der Sprint-Ziele unterstützt hat. Die Kommunikation war stets klar da er auch einen Drang hatte, alles zu verinnerlichen. Es hat sehr viel Spaß gemacht, mit ihm zu arbeiten.",
     },
     {
       signatur: "Alexander M.",
