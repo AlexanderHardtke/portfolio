@@ -13,6 +13,26 @@ export class ProjectComponent {
 
   projects = [
     {
+      name: "Join",
+      imgDevice: "project_join.png",
+      imgBlank: "join_desktop.png",
+      descriptionEng: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      descriptionGer: "Taskmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
+      usedTech: "JavaScript | HTML | CSS | Firebase",
+      gitHub: "https://github.com/AlexanderHardtke/Join",
+      projectLink: "https://alexander-hardtke.com/Join/index.html"
+    },
+    {
+      name: "DABubble",
+      imgDevice: "da_bubble.png",
+      imgBlank: "da_bubble_desktop.png",
+      descriptionEng: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      descriptionGer: "Ein Slack-Klon. Er revolutioniert die Teamkommunikation und Zusammenarbeit mit seiner intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und seiner strukturierten Kanalorganisation.",
+      usedTech: "Angular | Typescript | Firebase",
+      gitHub: "https://github.com/AlexanderHardtke/da_bubble",
+      projectLink: "https://dabubble.alexander-hardtke.com/"
+    },
+    {
       name: "Sharkie",
       imgDevice: "project_sharkie.png",
       imgBlank: "sharkie_desktop.png",
@@ -31,16 +51,6 @@ export class ProjectComponent {
       usedTech: "JavaScript | HTML | CSS | API",
       gitHub: "https://github.com/AlexanderHardtke/Pokedex",
       projectLink: "https://alexander-hardtke.com/Pokedex/index.html"
-    },
-    {
-      name: "Join",
-      imgDevice: "project_join.png",
-      imgBlank: "join_desktop.png",
-      descriptionEng: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      descriptionGer: "Taskmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu.",
-      usedTech: "JavaScript | HTML | CSS | Firebase",
-      gitHub: "https://github.com/AlexanderHardtke/Join",
-      projectLink: "https://alexander-hardtke.com/Join/index.html"
     },
   ]
 }
