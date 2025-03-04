@@ -68,9 +68,15 @@ section {
     }
 }
 
-@media screen and (max-width:1040px) {
+@media screen and (max-width:1073px) {
     h1 {
         font-size: 77px;
+    }
+}
+
+@media screen and (max-width:949px) {
+    h1 {
+        font-size: 70px;
     }
 }
 

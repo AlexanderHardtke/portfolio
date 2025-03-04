@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PortfoliodataService {
-  lang: "en" | "ger";
+  lang: "ger" | "en";
   page: "index" | "impressum" | "privacy";
-  mail = "Alex87.Hardtke@googlemail.com";
+  mail = "mail@alexander-hardtke.com";
 
   constructor() {
-    this.lang = "en";
+    this.lang = "ger";
     this.page = "index"
   }
 }

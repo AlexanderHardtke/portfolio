@@ -33,7 +33,7 @@
         </div>
 
         <var>
-            <a class="dFlexCenter" href="#contact">Reden wir!</a>
+            <a class="dFlexCenter" href="#contact">Schreib mir!</a>
         </var>
     </div>
     }
@@ -51,10 +51,17 @@
                     src="../../assets/img/icons/linkedIn.png"></a>
         </div>
     </div>
-
-    <div class="scroll">
-        <span>Scroll down</span>
-        <img src="../../assets/img/icons/arrowDown.png">
-    </div>
+    @if (portData.lang == "en") {
+        <div class="scroll">
+            <span>Scroll down</span>
+            <img src="../../assets/img/icons/arrowDown.png">
+        </div>
+    } @else {
+        <div class="scroll scrollGer">
+            <span>Runter scrollen</span>
+            <img src="../../assets/img/icons/arrowDown.png">
+        </div>
+    }
+    
 
 </section>
