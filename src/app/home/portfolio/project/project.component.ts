@@ -13,6 +13,16 @@ export class ProjectComponent {
 
   projects = [
     {
+      name: "Videoflix",
+      imgDevice: "project_pokedex.png",
+      imgBlank: "pokedex_desktop.png",
+      descriptionEng: "Videoflix is a platform for watching short videos. The platform is designed for a seamless streaming experience.",
+      descriptionGer: "Videoflix ist eine Video-Plattform für kurze Videos. Die Plattform bietet ein nahtloses Streaming-Erlebnis.",
+      usedTech: "Django | Python | Docker | Redis",
+      gitHub: "https://github.com/AlexanderHardtke/videoflix_backend",
+      projectLink: "https://videoflix.alexander-hardtke.com/"
+    },
+    {
       name: "Join",
       imgDevice: "project_join.png",
       imgBlank: "join_desktop.png",
@@ -41,16 +51,6 @@ export class ProjectComponent {
       usedTech: "JavaScript | HTML | CSS",
       gitHub: "https://github.com/AlexanderHardtke/Sharkie",
       projectLink: "https://alexander-hardtke.com/Sharkie/index.html"
-    },
-    {
-      name: "Pokedex",
-      imgDevice: "project_pokedex.png",
-      imgBlank: "pokedex_desktop.png",
-      descriptionEng: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-      descriptionGer: "Basierend auf der PokéAPI. Eine einfache Bibliothek die Pokemondaten bereitstellt und katalogisiert.",
-      usedTech: "JavaScript | HTML | CSS | API",
-      gitHub: "https://github.com/AlexanderHardtke/Pokedex",
-      projectLink: "https://alexander-hardtke.com/Pokedex/index.html"
     },
   ]
 }
