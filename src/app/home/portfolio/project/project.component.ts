@@ -16,8 +16,8 @@ export class ProjectComponent {
       name: "Videoflix",
       imgDevice: "project_videoflix.png",
       imgBlank: "videoflix_desktop.png",
-      descriptionEng: "Modern streaming platform with Docker, Redis caching, PostgreSQL, FFmpeg video processing, JWT cookie authentication and a REST API — multilingual, accessible with keyboard controls, dark/light mode and thoroughly tested.",
-      descriptionGer: "Moderne Streaming-Plattform mit Docker, Redis-Caching, PostgreSQL, FFmpeg-Videokonvertierung, JWT-Cookie-Auth und REST-API – mehrsprachig, barrierefrei mit Keyboard-Controls, Dark/Light-Mode und umfassend getestet.",
+      descriptionEng: "Modern streaming platform with Docker, Redis caching, PostgreSQL, FFmpeg video processing, JWT cookie authentication and a REST API, multilingual, accessible with keyboard controls, dark/light mode and thoroughly tested.",
+      descriptionGer: "Moderne Streaming-Plattform mit Docker, Redis-Caching, PostgreSQL, FFmpeg-Videokonvertierung, JWT-Cookie-Auth und REST-API, mehrsprachig, barrierefrei mit Keyboard-Controls, Dark/Light-Mode und umfassend getestet.",
       usedTech: "Django | Python | Docker | Redis",
       gitHub: "https://github.com/AlexanderHardtke/videoflix_backend",
       projectLink: "https://videoflix.alexander-hardtke.com/"
