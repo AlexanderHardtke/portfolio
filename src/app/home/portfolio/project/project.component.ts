@@ -14,9 +14,9 @@ export class ProjectComponent {
   projects = [
     {
       name: "Videoflix",
-      imgDevice: "project_pokedex.png",
-      imgBlank: "pokedex_desktop.png",
-      descriptionEng: "Videoflix is a platform for watching short videos. The platform is designed for a seamless streaming experience.",
+      imgDevice: "project_videoflix.png",
+      imgBlank: "videoflix_desktop.png",
+      descriptionEng: "Videoflix is a streaming-platform for watching short videos. The platform is designed for a seamless streaming experience.",
       descriptionGer: "Videoflix ist eine Video-Plattform für kurze Videos. Die Plattform bietet ein nahtloses Streaming-Erlebnis.",
       usedTech: "Django | Python | Docker | Redis",
       gitHub: "https://github.com/AlexanderHardtke/videoflix_backend",
